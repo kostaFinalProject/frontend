@@ -1,0 +1,35 @@
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  perspective: 1px;
+}
+
+.parallax div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 50px;
+  color: #fff;
+}
+
+.parallax .item1 {
+  background-color: #333;
+  height: 150rem;
+}
+
+.parallax .item2 {
+  top: 800px;
+  background-color: aqua;
+  height: 500px;
+  transform: translateZ(-3px);
+  color: red;
+}
+
+.parallax .item3 {
+  top: 900px;
+  background-color: blueviolet;
+  height: 500px;
+  transform: translateZ(-1px);
+  opacity: 0.7;
+}
