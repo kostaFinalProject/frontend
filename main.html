@@ -1,21 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <title>Document</title>
 </head>
+
+<header>
+  <div id="header-placeholder"></div>
+</header>
+
 <body>
-  <div id="header"></div>
-  <div id="content">
-    대충본문
-  </div>
-  <div id="footer"></div>
+  <main>
+    <div class="mainContainer">
+      <article class="slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/img/manchestercity.png" alt="Image 1"></div>
+            <div class="swiper-slide"><img src="/img/realmadrid.png" alt="Image 2"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </article>
+
+      <article class="teamProduct">
+        <div class="flame">
+          <div class="flame-swiper-container">
+            <ul class="flameWrapper" id="swiper-wrapper">
+              <li class="swiperSlideItem">
+                <a href="#">
+                  <img src="/img/브라이턴 &호프 알비온.png" alt="브라이턴">
+                  <div class="flameWrapperText">브라이턴 & 호브 앨비언 FC</div>
+                </a>
+              </li>
+              <li class="swiperSlideItem">
+                <a href="#">
+                  <img src="/img/브라이턴 &호프 알비온.png" alt="브라이턴">
+                  <div class="flameWrapperText">브라이턴 & 호브 앨비언 FC</div>
+                </a>
+              </li>
+              <li class="swiperSlideItem">
+                <a href="#">
+                  <img src="/img/브라이턴 &호프 알비온.png" alt="브라이턴">
+                  <div class="flameWrapperText">브라이턴 & 호브 앨비언 FC</div>
+                </a>
+              </li>
+              <li class="swiperSlideItem">
+                <a href="#">
+                  <img src="/img/브라이턴 &호프 알비온.png" alt="브라이턴">
+                  <div class="flameWrapperText">브라이턴 & 호브 앨비언 FC</div>
+                </a>
+              </li>
+              <li class="swiperSlideItem">
+                <a href="#">
+                  <img src="/img/브라이턴 &호프 알비온.png" alt="브라이턴">
+                  <div class="flameWrapperText">브라이턴 & 호브 앨비언 FC</div>
+                </a>
+              </li>
+              <li class="swiperSlideItem">
+                <a href="#">
+                  <img src="/img/브라이턴 &호프 알비온.png" alt="브라이턴">
+                  <div class="flameWrapperText">브라이턴 & 호브 앨비언 FC</div>
+                </a>
+              </li>
+              <!-- 추가 슬라이드 -->
+              <li class="swiperSlideItem">
+                <a href="#">
+                  <img src="/img/브라이턴 &호프 알비온.png" alt="브라이턴">
+                  <div class="flameWrapperText">브라이턴 & 호브 앨비언 FC</div>
+                </a>
+              </li>
+            </ul>
+            <div class="flame-controls">
+              <button id="prevSlide">◀</button>
+              <span id="currentSlide">1 / 1</span>
+              <button id="nextSlide">▶</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="itemProduct">
+        <div class="best">
+          <h2 class="ProductTitle">
+            BEST ITEM
+            <span class="aaa">인기 제품을 여기서 한눈에 보세요</span>
+          </h2>
+          <div class="board_list_body">
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+          </div>
+          <div class="more">
+            <button class="moreBtn">더보기</button>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="itemProduct">
+        <div class="best">
+          <h2 class="ProductTitle">
+            BEST ITEM
+            <span class="aaa">인기 제품을 여기서 한눈에 보세요</span>
+          </h2>
+          <div class="board_list_body">
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+          </div>
+          <div class="more">
+            <button class="moreBtn">더보기</button>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="itemProduct">
+        <div class="best">
+          <h2 class="ProductTitle">
+            BEST ITEM
+            <span class="aaa">인기 제품을 여기서 한눈에 보세요</span>
+          </h2>
+          <div class="board_list_body">
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="board_img"><img src="" alt="이미지"></div>
+              <div class="board_content">
+                <div class="board_title"><a href="#">ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)</a></div>
+                <div class="board_price"><span>209,000원</span><span>99,000원</span><span>53%</span></div>
+                <div class="board_name">Official Licensed Product</div>
+              </div>
+            </div>
+          </div>
+          <div class="more">
+            <button class="moreBtn">더보기</button>
+          </div>
+        </div>
+      </article>
+
+      <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+
+      <script>
+        const swiper = new Swiper('.swiper-container', {
+          loop: true,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // dots 클릭 가능
+          },
+        });
+
+        const sliderWrapper = document.getElementById("swiper-wrapper");
+        const prevButton = document.getElementById("prevSlide");
+        const nextButton = document.getElementById("nextSlide");
+        const currentSlideSpan = document.getElementById("currentSlide");
+
+        // 슬라이드 설정
+        let currentIndex = 0; // 현재 슬라이드 인덱스
+        const slideWidth = 256 + 20; // 슬라이드 너비 + margin-left 값
+        const visibleSlides = 5; // 한 번에 보이는 슬라이드 수
+        const totalSlides = sliderWrapper.children.length; // 전체 슬라이드 개수
+        const maxIndex = totalSlides - visibleSlides; // 최대 인덱스 (넘어가면 빈 공간 발생)
+
+        // 슬라이드 이동 함수
+        function updateSliderPosition() {
+          const offset = -(currentIndex * slideWidth); // 이동할 위치 계산
+          sliderWrapper.style.transform = `translateX(${offset}px)`;
+          const currentPage = currentIndex + 1; // 현재 슬라이드 번호
+          currentSlideSpan.textContent = `${currentPage} / ${totalSlides-4}`;
+        }
+
+        // 이전 버튼 클릭 이벤트
+        prevButton.addEventListener("click", () => {
+          if (currentIndex > 0) {
+            currentIndex -= 1; // 이전 슬라이드로 이동
+            updateSliderPosition();
+          }
+        });
+
+        // 다음 버튼 클릭 이벤트
+        nextButton.addEventListener("click", () => {
+          if (currentIndex < maxIndex) {
+            currentIndex += 1; // 다음 슬라이드로 이동
+            updateSliderPosition();
+          }
+        });
+
+        // 초기 슬라이드 위치 업데이트
+        updateSliderPosition();
+
+
+        // <!-- 동적로딩 -->
+        document.addEventListener("DOMContentLoaded", function () {
+          function loadHTML(url, elementId) {
+            fetch(url)
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+              })
+              .catch(error => console.error('Error loading the HTML:', error));
+          }
+
+          loadHTML('header.html', 'header-placeholder');
+          loadHTML('footer.html', 'footer-placeholder');
+        });
+      </script>
 
 
 
-  <script>
-
-  </script>
 </body>
+
 </html>
