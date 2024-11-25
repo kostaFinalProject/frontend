@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
-    <link rel="stylesheet" href="/css/header.css">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js" defer></script>
-    <script src="headerScript.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <link rel="stylesheet" href="/css/header.css">
+  <script src="//code.jquery.com/jquery-1.12.0.min.js" defer></script>
+  <script src="headerScript.js" defer></script>
 </head>
-    <header>
-        <!-- 메인 컨테이너 -->
-        <div class="headerMainContainer">
-          <div class="left">
-            <a href="/">
-              <img src="https://fakeimg.pl/250x100/" alt="logo">
+<header>
+  <!-- 메인 컨테이너 -->
+  <div class="headerContainer">
+    <div class="headerMainContainer">
+      <div class="left">
+        <a href="/">
+          <img src="https://fakeimg.pl/150x35/" alt="logo">
+        </a>
+      </div>
+      <div class="middle">
+        <input class="search" type="text" placeholder="검색어를 입력하세요">
+        <a href="#">
+          <img src="/img/search.svg" alt="검색 버튼" class="search-icon">
+        </a>
+      </div>
+      <div class="right">
+        <a href="/login">
+          <img src="/img/box-arrow-in-right.svg" alt="로그인" class="icon">
+          <span>로그인</span>
+        </a>
+        <a href="/signup">
+          <img src="/img/person-add.svg" alt="회원가입" class="icon">
+          <span>회원가입</span>
+        </a>
+        <a href="/basket">
+          <img src="/img/basket3.svg" alt="장바구니" class="icon">
+          <span>장바구니</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 카테고리 -->
+    <div class="headerNavContainer">
+      <nav class="shop">
+        <ul class="category">
+          <li>
+            <a href="" id="category">
+              <img src="/img/list.svg" alt="카테고리 아이콘">
+              <span>카테고리</span>
             </a>
-          </div>
-          <div class="middle">
-            <input class="search" type="text" placeholder="검색어를 입력하세요">
-            <a href="#">
-              <img src="/img/search.svg" alt="검색 버튼" class="search-icon">
-            </a>
-          </div>
-          <div class="right">
-            <a href="/login">
-              <img src="/img/box-arrow-in-right.svg" alt="로그인" class="icon">
-              <span>로그인</span>
-            </a>
-            <a href="/signup">
-              <img src="/img/person-add.svg" alt="회원가입" class="icon">
-              <span>회원가입</span>
-            </a>
-            <a href="/basket">
-              <img src="/img/basket3.svg" alt="장바구니" class="icon">
-              <span>장바구니</span>
-            </a>
-          </div>
-        </div>
-    
-        <!-- 카테고리 -->
-        <div class="headerNavContainer">
-          <nav class="shop">
-            <ul class="category">
-              <li>
-                <img src="/img/list.svg" alt="카테고리 아이콘">
-                <span>카테고리</span>
-              </li>
-              <li><a href="/item-sort.html?category=snacks">과자·초콜릿</a></li>
-              <li><a href="/item-sort.html?category=icecream">아이스크림</a></li>
-              <li><a href="/item-sort.html?category=bread">빵·떡·잼</a></li>
-              <li><a href="/item-sort.html?category=dairy">우유·유제품</a></li>
-              <li><a href="/item-sort.html?category=fruits">과일</a></li>
-              <li><a href="/item-sort.html?category=drinks">음료·커피·생수</a></li>
-            </ul>
-          </nav>
-          <div class="community">
-            <a href="/community">커뮤니티</a>
-          </div>
-        </div>
-      </header>
+          </li>
+          <li style="color: #e2e2e2;"> | </li>
+          <li><a href="/item-sort.html?category=snacks">국내축구</a></li>
+          <li><a href="/item-sort.html?category=icecream">해외축구</a></li>
+          <li><a href="/item-sort.html?category=bread">국내야구</a></li>
+          <li><a href="/item-sort.html?category=dairy">여자배구</a></li>
+          <li><a href="/item-sort.html?category=fruits">e스포츠</a></li>
+          <li><a href="/item-sort.html?category=drinks">기타</a></li>
+        </ul>
+      </nav>
+      <div class="community">
+        <a href="/community">커뮤니티</a>
+      </div>
+    </div>
+  </div>
+</header>
+
 </html>

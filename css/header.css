@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,8 @@ header {
   z-index: 1000; /* 다른 요소보다 위에 표시되도록 z-index 설정 */
   background-color: white; /* 배경색 설정 (필요시 조정) */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 헤더 아래에 약간의 그림자 추가 */
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 header img {
@@ -25,13 +28,16 @@ a {
   color: inherit;
 }
 
+.headerContainer{
+  width: 1360px;
+  margin-top: 20px;
+}
 /* 메인 컨테이너 */
 .headerMainContainer{
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 125px;
-  padding: 0 125px;
 }
 
 /* 왼쪽 로고 */
@@ -49,8 +55,8 @@ a {
 }
 
 .middle .search {
-  width: 500px;
-  height: 30px;
+  width: 380px;
+  height: 44px;
   font-size: 20px;
   border: none;
   border-bottom: 1px solid #000;
@@ -80,18 +86,21 @@ img.search {
   white-space: nowrap;
 }
 
-.right img {
-  width: 40px;
-  height: 40px;
+.right a img {
+  width: 28px;
+  height: 28px;
 }
 
-.right .span{
-  font-size: 13px;
+.right a span{
+  font-size: 14px;
   margin-top: 6px;
   overflow-x: auto; /* 화면이 작아져도 스크롤 가능 */
   white-space: nowrap; /* 줄바꿈 방지 */
   display: flex;
   align-items: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* 카테고리 스타일 */
@@ -101,8 +110,7 @@ img.search {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 125px;
-  padding: 0 125px;
+  height: 70px;
 }
 
 
@@ -116,12 +124,12 @@ img.search {
 
 
 .category img {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
 }
 
 .category span {
-  font-size: 20px;
+  font-size: 17px;
   font-family: 'SpoqaHanSansNeo-Regular';
   font-weight: bold;
   margin-left: 10px;
@@ -129,21 +137,31 @@ img.search {
   align-items: center;
 }
 
+#category{
+width: 100px;
+display: flex;
+}
+
 .category li {
-  font-size: 18px;
+  font-size: 17px;
   font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5em 1em 0.5em 0;
+  padding-left: 1em;
   margin-right: 10px;
   list-style: none;
 }
 
+.category li a img{
+  width: 28px;
+  height: 28px;
+}
+
 .community {
-  font-size: 20px;
+  font-size: 17px;
   font-family: 'SpoqaHanSansNeo-Regular';
   font-weight: bold;
   display: flex;
