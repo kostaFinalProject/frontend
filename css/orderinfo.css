@@ -1,0 +1,370 @@
+/* Google Fonts - Jost */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+/* Pretendard CDN */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+#content{
+  padding-bottom: 150px;
+}
+
+body{
+  margin-top: 215px;
+  font-family: 'Jost', 'Pretendard', '맑은고딕', 'Malgun Gothic', '돋움', Dotum, Helvetica, Arial, AppleGothic, sans-serif;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+li{
+  display: list-item;
+  text-align: -webkit-match-parent;
+  list-style: none;
+  color: #757575;
+}
+
+a{
+  text-decoration: none;
+  font-size: 13px;
+  color: #010101;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+table {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+th {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 10px 16px;
+}
+
+button{
+  border: none;
+  margin: 0 0 0 -1px !important;
+}
+
+div{
+  display: block;
+}
+
+select{
+  background: #fff;
+  background-size: 10px;
+  padding-left: 10px;
+  padding-right: 25px;
+  font-size: 13px;
+  max-width: 100%;
+  height: 40px;
+  padding: 0 30px 0 15px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+/* 메인 컨테이너 스타일 */
+#content {
+  width: 1360px; /* 전체 너비 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: flex; /* 플렉스 컨테이너 */
+  gap: 20px; /* 좌우 간격 */
+}
+
+/* 왼쪽 메뉴 스타일 */
+.manuwrap {
+  width: 200px; /* 고정 너비 */
+  font-size: 16px; /* 글씨 크기 */
+  line-height: 1.8; /* 행간 */
+  background-color: #ffffff; /* 배경색 */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.manuwrap h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.manuwrap article{
+  line-height: 1,5;
+}
+
+.manuwrap article ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 5px;
+}
+
+article h4{
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.manuwrap article ul li a{
+  color: var(--font-color-gray);
+}
+
+/* 오른쪽 콘텐츠 스타일 */
+.contentwrap {
+  width: 1130px;
+  background-color: #ffffff; /* 배경색 */
+}
+
+.typeNav{
+  position: relative;
+}
+
+.menu {
+  margin: 0 0 20px;
+  border-bottom: 1px solid #868686;
+  background: #fff;
+  box-sizing: border-box;
+  height: 53px;
+  padding: 0;
+}
+
+.menu li {
+  float: left;
+  margin-left: -1px;
+  background: #f6f6f6;
+}
+
+.selected{
+  border: 1px solid #000;
+  border-bottom: #f9f9f9;
+  margin-right: 1px;
+}
+
+.cs{
+  border-bottom: 1px solid #868686;;
+}
+
+.menu .selected a {
+  position: relative;
+  border-color: #868686;
+  color: #000;
+  font-weight: bold;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-bottom: 0;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+}
+
+.menu li a {
+  min-width: 218px;
+  padding: 16px 20px;
+  border: 1px solid #e5e5e5;
+  border-bottom: 0;
+  color: #545454;
+  background: #f6f6f6;
+}
+
+.menu .cs a{
+  border: 1px solid #e5e5e5;
+  border-bottom: 0;
+  color: #545454;
+  background: #f6f6f6;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+}
+
+
+fieldset{
+  display: flex;
+  padding: 20px;
+  background: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  vertical-align: top;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+}
+
+legend {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  line-height: 0;
+}
+
+.stateSelect {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+.stateSelect select {
+  width: 155px;
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+  white-space: nowrap;
+}
+
+.period {
+  margin: 0 20px 0 0;
+}
+
+.period .btnNormalSizeM {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  line-height: 1;
+  font-weight: normal;
+  vertical-align: middle;
+  word-spacing: -0.5px;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: #000;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 13px 20px;
+  font-size: 13px;
+  margin: 0 0 0 -1px !important;
+}
+
+.period .btnNormalSizeMselected {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  line-height: 1;
+  font-weight: normal;
+  vertical-align: middle;
+  word-spacing: -0.5px;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: #000;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 13px 20px;
+  font-size: 13px;
+  margin: 0 0 0 -1px !important;
+}
+
+.date {
+  display: inline-block;
+}
+
+input[type=text][readonly] {
+  background: #f9f9f9;
+}
+
+.TextDatepicker{
+  height: 40px;
+  line-height: 40px;
+  padding: 2px 4px 2px 15px;
+  border: 1px solid #e0e0e0;
+  color: var(--font-color-base);
+  user-select: none;
+  border-color: #000;
+    transition: .3s;
+}
+
+.datepickertrigger{
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  vertical-align: middle;
+  background-size: 20px 20px;
+}
+
+#history_end_date {
+  margin-left: 10px;
+}
+
+.btnSubmitSizeMeDataSet {
+  position: relative;
+  padding: 13px 20px;
+  font-size: 13px;
+  display: inline-block;
+  box-sizing: border-box;
+    border: 1px solid transparent;
+    line-height: 1;
+    font-weight: normal;
+    text-decoration: none;
+    vertical-align: middle;
+    word-spacing: -0.5px;
+    letter-spacing: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--font-color-sp-rev);
+    background-color: var(--font-color-sp);
+    border-radius: 3px;
+}
+
+#order_search_btn {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.0001;
+}
+
+.help{
+  margin: 10px 0;
+}
+
+.help li{
+  margin: 2px 0;
+    padding: 2px 0 2px 22px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #6d6d6d;
+}
+
+.none{
+  text-align: center;
+  padding: 60px 0;
+}
