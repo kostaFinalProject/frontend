@@ -12,109 +12,131 @@
   <div class="container">
     <div id="content" class="-frame">
       <section class="manuwrap">
-        <h3>주문조회</h3>
+        <h3>마이페이지</h3>
         <article class="myshopmain">
           <h4>나의 쇼핑활동</h4>
           <ul>
-            <a href=""><li>주문/배송조회</li></a>
-            <a href=""><li>장바구니</li></a>
-            <a href=""><li>관심상품</li></a>
-            <a href=""><li>최근 본 상품</li></a>
-            <a href=""><li>정기배송 관리</li></a>
-            <a href=""><li>내가 쓴 게시글</li></a>
+            <a href="">
+              <li>주문/배송조회</li>
+            </a>
+            <a href="">
+              <li>장바구니</li>
+            </a>
+            <a href="">
+              <li>관심상품</li>
+            </a>
+            <a href="">
+              <li>최근 본 상품</li>
+            </a>
+            <a href="">
+              <li>정기배송 관리</li>
+            </a>
+            <a href="">
+              <li>내가 쓴 게시글</li>
+            </a>
           </ul>
         </article>
         <article class="myshopmain">
           <h4>쇼핑혜택 안내</h4>
           <ul>
-            <a href=""><li>내 쿠폰정보</li></a>
-            <a href=""><li>적립금 내역</li></a>
+            <a href="">
+              <li>내 쿠폰정보</li>
+            </a>
+            <a href="">
+              <li>적립금 내역</li>
+            </a>
           </ul>
         </article>
         <article class="myshopmain">
           <h4>커뮤니티</h4>
           <ul>
-            <a href=""><li>NOTICE</li></a>
-            <a href=""><li>Q&A</li></a>
-            <a href=""><li>EVENT</li></a>
+            <a href="">
+              <li>NOTICE</li>
+            </a>
+            <a href="">
+              <li>Q&A</li>
+            </a>
+            <a href="">
+              <li>EVENT</li>
+            </a>
           </ul>
         </article>
         <article class="myshopmain">
           <h4>나의 정보 관리</h4>
           <ul>
-            <a href=""><li>배송지 관리</li></a>
-            <a href=""><li>회원 정보 수정</li></a>
-            <a href=""><li>로그아웃</li></a>
+            <a href="">
+              <li>배송지 관리</li>
+            </a>
+            <a href="">
+              <li>회원 정보 수정</li>
+            </a>
+            <a href="">
+              <li>로그아웃</li>
+            </a>
           </ul>
         </article>
       </section>
 
       <section class="contentwrap">
-      <div class="typeNav">
-        <ul class="menu">
-          <li class="selected">
-            <a href="">
-              주문내역조회(
-                <span id="total_orders">0</span>
-              )
-            </a>
-          </li>
-          <li class="cs">
-            <a href="">
-              취소/반품/교환 내역(
-                <span id="total_orders_cs">0</span>
-              )
-            </a>
-          </li>
-        </ul>
-      </div>
-      <form method="get" id="OrderHistoryForm" name="OrderHistoryForm">
-        <div class="history">
-          <fieldset>
-            <legend>검색기간설정</legend>
-            <div class="stateSelect">
-              <select name="orderstatus" id="orderstatus" class="fSelect">
-                <option value="all">전체 주문상태</option>
-                <option value="shippedbefore">입금전</option>
-                <option value="shippedstandby">배송준비중</option>
-                <option value="shippedbegin">배송중</option>
-                <option value="shipcomplate">배송완료</option>
-                <option value="ordercancel">취소</option>
-                <option value="orderexchange">교환</option>
-                <option value="orderreturn">반품</option>
-              </select>
-            </div>
-            <span class="period">
-              <a href="" class="btnNormalSizeMselected" days="00">오늘</a>
-              <a href="" class="btnNormalSizeM" days="30">1개월</a>
-              <a href="" class="btnNormalSizeM" days="90">3개월</a>
-              <a href="" class="btnNormalSizeM" days="180">6개월</a>
-            </span>
-            <div class="date">
-              <span class="datepicker">
-                <input type="text" id="hisrotyStartDate" name="hisrotyStartDate" class="TextDatepicker" readonly="readonly" size="10" value="2024-08-28">
-                <button type="button" class="datepickertrigger">
-                  <img src="" alt="date">
-                </button>
-                "~"
-                <input type="text" id="hisrotyEndDate" name="hisrotyEndDate" class="TextDatepicker" readonly="readonly" size="10" value="2024-11-26">
-                <button type="button" class="datepickertrigger">
-                  <img src="" alt="date">
-                </button>
-              </span>
-              <span class="btnSubmitSizeMeDataSet">
-                "조회"
-                <input type="image" id="order_search_btn" alt="조회">
-              </span>
-            </div>
-          </fieldset>
+        <div class="contentwraptitle"> 주문조회</div>
+        <div class="typeNav">
+          <!-- <ul class="menu">
+            <li class="selected">
+              <a href="">
+                주문내역조회
+              </a>
+            </li> -->
+          </ul>
         </div>
-        <ul class="help">
-          <li>기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 주문처리완료 후 36개월 이내의 주문내역을 조회하실 수 있습니다.</li>
-          <li>취소/교환/반품 신청은 배송완료일 기준 7일까지 가능합니다.</li>
-        </ul>
-      </form>
-      <p class="none">주문 내역이 없습니다.</p>
+        <form method="get" id="OrderHistoryForm" name="OrderHistoryForm">
+          <div class="history">
+            <fieldset>
+              <legend>검색기간설정</legend>
+              <div class="stateSelect">
+                <select name="orderstatus" id="orderstatus" class="fSelect">
+                  <option value="all">전체 주문상태</option>
+                  <option value="shippedbefore">입금전</option>
+                  <option value="shippedstandby">배송준비중</option>
+                  <option value="shippedbegin">배송중</option>
+                  <option value="shipcomplate">배송완료</option>
+                  <option value="ordercancel">취소</option>
+                  <option value="orderexchange">교환</option>
+                  <option value="orderreturn">반품</option>
+                </select>
+              </div>
+              <span class="period">
+                <a href="" class="btnNormalSizeMselected" days="00">오늘</a>
+                <a href="" class="btnNormalSizeM" days="30">1개월</a>
+                <a href="" class="btnNormalSizeM" days="90">3개월</a>
+                <a href="" class="btnNormalSizeM" days="180">6개월</a>
+              </span>
+              <div class="date">
+                <span class="datepicker">
+                  <input type="text" id="hisrotyStartDate" name="hisrotyStartDate" class="TextDatepicker"
+                    readonly="readonly" size="10" value="2024-08-28">
+                  <button type="button" class="datepickertrigger">
+                    <img src="" alt="date">
+                  </button>
+                  "~"
+                  <input type="text" id="hisrotyEndDate" name="hisrotyEndDate" class="TextDatepicker"
+                    readonly="readonly" size="10" value="2024-11-26">
+                  <button type="button" class="datepickertrigger">
+                    <img src="" alt="date">
+                  </button>
+                </span>
+                <span class="btnSubmitSizeMeDataSet">
+                  "조회"
+                  <input type="image" id="order_search_btn" alt="조회">
+                </span>
+              </div>
+            </fieldset>
+          </div>
+          <ul class="help">
+            <li>기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 주문처리완료 후 36개월 이내의 주문내역을 조회하실 수 있습니다.</li>
+            <li>취소/교환/반품 신청은 배송완료일 기준 7일까지 가능합니다.</li>
+          </ul>
+        </form>
+        <p class="none">주문 내역이 없습니다.</p>
       </section>
     </div>
   </div>

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
+
 
 * {
   margin: 0;
@@ -23,7 +25,7 @@ header {
   /* 배경색 설정 (필요시 조정) */
   display: flex;
   justify-content: center;
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 13px;
 }
 
@@ -70,7 +72,7 @@ a {
   border: none;
   border-bottom: 1px solid #000;
   outline: none;
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 img.search {
@@ -112,7 +114,7 @@ img.search {
   align-items: center;
   font-weight: 400;
   font-style: normal;
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 카테고리 스타일 */
@@ -123,9 +125,8 @@ img.search {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  width: 1360px;
 }
-
-
 
 .category {
   display: flex;
@@ -133,8 +134,12 @@ img.search {
   flex-direction: row;
   white-space: nowrap;
   /* 줄바꿈 방지 */
+
 }
 
+#aaa{
+  padding: 5px;
+}
 
 .category img {
   width: 28px;
@@ -142,9 +147,8 @@ img.search {
 }
 
 .category span {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 27px;
-  font-weight: bold;
   margin-left: 10px;
   display: flex;
   align-items: center;
@@ -156,9 +160,9 @@ img.search {
 }
 
 .category li {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 23px;
-  font-weight: bold;
+
   line-height: 1.5;
   display: inline-flex;
   align-items: center;
@@ -169,15 +173,16 @@ img.search {
 }
 
 .category li a img {
-  transform: translateY(1px);
+  transform: translateY(5.3px);
   width: 28px;
   height: 28px;
 }
 
 .communitysection a{
-  margin-right: 33px;
-  font-family: 'Nanum Pen Script', cursive;
-  font-weight: bold;
+  margin-left: 30px;
+  margin-right: 3px;
+  font-family: "Noto Sans KR", sans-serif;
+
   font-size: 23px;
 }
 
@@ -204,7 +209,7 @@ img.search {
 
 .categorypond a{
   position: relative; /* submenu의 기준점 */
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 23px;
 }
 
@@ -214,7 +219,7 @@ img.search {
 }
 
 .submenu li {
-  font-family: 'Nanum Pen Script', cursive;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 17px;
   position: relative;
   min-height: 30px;
