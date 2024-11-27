@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@200..900&display=swap');
 
 * {
   margin: 0;
@@ -8,15 +9,22 @@
 }
 
 header {
-  position: fixed; /* 헤더를 고정 */
-  top: 0; /* 화면의 최상단에 위치 */
-  left: 0; /* 화면의 가장 왼쪽에 위치 */
-  width: 100%; /* 화면 너비 전체를 차지 */
-  z-index: 1000; /* 다른 요소보다 위에 표시되도록 z-index 설정 */
-  background-color: white; /* 배경색 설정 (필요시 조정) */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 헤더 아래에 약간의 그림자 추가 */
+  position: fixed;
+  /* 헤더를 고정 */
+  top: 0;
+  /* 화면의 최상단에 위치 */
+  left: 0;
+  /* 화면의 가장 왼쪽에 위치 */
+  width: 100%;
+  /* 화면 너비 전체를 차지 */
+  z-index: 1000;
+  /* 다른 요소보다 위에 표시되도록 z-index 설정 */
+  background-color: white;
+  /* 배경색 설정 (필요시 조정) */
   display: flex;
   justify-content: center;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 13px;
 }
 
 header img {
@@ -28,12 +36,13 @@ a {
   color: inherit;
 }
 
-.headerContainer{
+.headerContainer {
   width: 1360px;
   margin-top: 20px;
 }
+
 /* 메인 컨테이너 */
-.headerMainContainer{
+.headerMainContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +70,7 @@ a {
   border: none;
   border-bottom: 1px solid #000;
   outline: none;
+  font-family: 'Nanum Pen Script', cursive;
 }
 
 img.search {
@@ -91,22 +101,24 @@ img.search {
   height: 28px;
 }
 
-.right a span{
-  font-size: 14px;
+.right a span {
+  font-size: 17px;
   margin-top: 6px;
-  overflow-x: auto; /* 화면이 작아져도 스크롤 가능 */
-  white-space: nowrap; /* 줄바꿈 방지 */
+  overflow-x: auto;
+  /* 화면이 작아져도 스크롤 가능 */
+  white-space: nowrap;
+  /* 줄바꿈 방지 */
   display: flex;
   align-items: center;
-  font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-family: 'Nanum Pen Script', cursive;
 }
 
 /* 카테고리 스타일 */
 
 
-.headerNavContainer{
+.headerNavContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,8 +130,9 @@ img.search {
 .category {
   display: flex;
   align-items: center;
-    flex-direction: row;
-  white-space: nowrap; /* 줄바꿈 방지 */
+  flex-direction: row;
+  white-space: nowrap;
+  /* 줄바꿈 방지 */
 }
 
 
@@ -129,22 +142,22 @@ img.search {
 }
 
 .category span {
-  font-size: 17px;
-  font-family: 'SpoqaHanSansNeo-Regular';
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 27px;
   font-weight: bold;
   margin-left: 10px;
   display: flex;
   align-items: center;
 }
 
-#category{
-width: 100px;
-display: flex;
+#category {
+  width: 100px;
+  display: flex;
 }
 
 .category li {
-  font-size: 17px;
-  font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 23px;
   font-weight: bold;
   line-height: 1.5;
   display: inline-flex;
@@ -155,16 +168,78 @@ display: flex;
   list-style: none;
 }
 
-.category li a img{
+.category li a img {
+  transform: translateY(1px);
   width: 28px;
   height: 28px;
 }
 
-.community {
-  font-size: 17px;
-  font-family: 'SpoqaHanSansNeo-Regular';
+.communitysection a{
+  margin-right: 33px;
+  font-family: 'Nanum Pen Script', cursive;
   font-weight: bold;
+  font-size: 23px;
+}
+
+.submenu {
+
+  position: relative; /* 부모 요소 바로 아래에 위치하도록 조정 */
+  border: 1px solid #f5f5f5;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  background: #fff;
+  padding: 10px 0;
+  white-space: nowrap;
+  min-width: 140px;
+  margin-top: 10px;
+}
+
+.hasChild {
+  position: relative; /* submenu의 기준점 */
+}
+
+.categorypond a{
+  position: relative; /* submenu의 기준점 */
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 23px;
+}
+
+.haschild:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu li {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 17px;
+  position: relative;
+  min-height: 30px;
   display: flex;
   align-items: center;
-  white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.submenu li a{
+  color: #999;
+  display: block;
+  line-height: 1.5;
+  padding: 5px 15px;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.submenu li:hover a {
+  color: var(--font-color-base);
+  display: block;
+  line-height: 1.5;
+  padding: 5px 15px;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  box-sizing: border-box;
 }

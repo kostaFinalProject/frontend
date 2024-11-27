@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -12,9 +13,13 @@
   <title>Document</title>
 </head>
 
+<script src="/js/headerfooter.js"></script>
+
+
 <header>
   <div id="header-placeholder"></div>
 </header>
+
 
 <body>
   <main>
@@ -384,25 +389,10 @@
         // 초기 슬라이드 위치 업데이트
         updateSliderPosition();
 
-
-        // <!-- 동적로딩 -->
-        document.addEventListener("DOMContentLoaded", function () {
-          function loadHTML(url, elementId) {
-            fetch(url)
-              .then(response => response.text())
-              .then(data => {
-                document.getElementById(elementId).innerHTML = data;
-              })
-              .catch(error => console.error('Error loading the HTML:', error));
-          }
-
-          loadHTML('header.html', 'header-placeholder');
-          loadHTML('footer.html', 'footer-placeholder');
-        });
       </script>
 
+<script src="/js/header.js"></script>
 
 
 </body>
-
 </html>
