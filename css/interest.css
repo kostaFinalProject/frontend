@@ -195,15 +195,15 @@ article h4{
 }
 
 .basket1{
-  width: 800px;
+  width: 1130px;
 }
 
 
 /* 전체 컨테이너 */
 .basketitem {
-  width: 800px;
+  width: 1130px;
   position: relative;
-
+  border: 1px solid #e8e8e8;
   background: #fff;
   box-sizing: border-box;
 }
@@ -212,8 +212,6 @@ article h4{
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  border: 1px solid #e8e8e8;
-  margin-bottom: 5px;
 }
 
 /* 체크박스 */
@@ -227,7 +225,6 @@ article h4{
     vertical-align: text-top;
     border: 1px solid #000;
     background: #fff;
-    transform: translate(5px,5px);
 }
 
 /* 썸네일 이미지 */
@@ -240,7 +237,7 @@ article h4{
 /* 상품 정보 */
 .description {
   transform: translate(0,5px);
-  width: 500px;
+  width: 770px;
 }
 
 .description .price li {
@@ -290,12 +287,13 @@ article h4{
 }
 /* 총 가격 */
 .sumprice {
-  transform: translate(0,5px);
-  text-align: center;
+  transform: translate(0,-10px);
+  display: flex;
   font-size: 1.2em;
   font-weight: bold;
   color: #000;
   min-width: 80px;
+  align-items: center
 }
 
 /* 수량 조절 */
@@ -335,6 +333,13 @@ article h4{
   background-color: #eee;
 }
 
+.buttonGroup{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+
 /* 버튼 그룹 */
 .buttonGroup a {
   display: inline-block;
@@ -345,6 +350,11 @@ article h4{
   color: #fff;
   border-radius: 5px;
   margin-right: 5px;
+  transform: translate(3px, -5px);
+}
+
+.buttonGroup a img{
+  transform: translate(28px,4px);
 }
 
 .buttonGroup .btnNormal {
@@ -375,69 +385,44 @@ article h4{
   color: #ff4d4f;
 }
 
-.basket2{
-  width: 300px;
-}
-.totalSummary{
-  border: 1px solid #999;
-  padding: 20px;
-}
-.totalSummaryTitle{
-  font-size: 15px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.Price{
+.deleteBtn{
   display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
+  justify-content:flex-end;
+  margin-top: 10px;
+  
 }
 
-.Price h4{
-  font-weight: 400;
-}
 
-.totalPrice{
-  border-top: 1px solid #e5e5e5;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.submitBtn{
+.selectDeleteBtn{
   transform: translateX(1px);
-  width: 299.5px;
-  height: 48px;
+  width: 80px;
+  height: 35px;
   border: 1px solid #000;
     font-size: 14px;
     line-height: 18px;
     font-weight: bold;
-    background: #000;
+    background: #222222;
     color: #ffffff;
 }
-.basket2 button{
-  margin-top: 10px !important;
-}
 
-.selectSubmitBtn{
+.allDeleteBtn{
   transform: translateX(1px);
-  width: 299.5px;
-  height: 48px;
+  width: 80px;
+  height: 35px;
   border: 1px solid #e0e0e0;
     font-size: 14px;
     line-height: 18px;
     font-weight: bold;
     color: #000;
     background-color: #fff;
+    margin-left: 3px !important;
 }
 
-.submitBtn:hover{
+.selectDeleteBtn:hover{
   color: #f9f9f9;
-  background-color: #444;
+  background-color: #000;
 }
 
-.selectSubmitBtn:hover{
+.allDeleteBtn:hover{
   border: 1px solid #000;
 }

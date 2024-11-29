@@ -171,76 +171,141 @@ article h4{
   padding: 0;
 }
 
-.basketfield{
-  width :1130px;
-  display:flex;
-  justify-content: space-between;
+.couponRegister{
+  text-align: center;
+  margin: 0 0 50px;
+  text-align: center;
+
+  height: 160px;
 }
 
-.help{
-  margin: 10px 0;
+.couponRegisterBox{
+    margin: 0 0 50px;
+    padding: 37px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-top: 1px solid #000;
+}
+
+  fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border: none;
+}
+legend {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 0;
+  height: 0;
+  line-height: 0;
+}
+
+.couponCode{
+  width: 342px;
+  box-sizing: border-box;
+    font-size: 14px;
+    outline: none !important;
+    height: 40px;
+    line-height: 40px;
+    padding: 2px 4px 2px 15px;
+    border: 1px solid #e0e0e0;
+    color: var(--font-color-base);
+}
+
+.couponsubmit{
+  min-width: 135px;
+  padding: 13px 20px;
+  font-size: 13px;
+  margin: 0 0 0 6px;
+  border: 1px solid #000;
+  font-weight: bold;
+  background: #000;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+input{
+  width: 342px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+.couponsubmit:hover{
+  color: #f9f9f9;
+  background-color: #444;
+}
+
+.textInfo{
+  color: #757575;;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.none{
+  color: #757575;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: normal;
+  margin-top: 10px;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.couponlist{
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.help h3{
+  margin: 20px 0;
+}
+
+.inner{
+  border: 1px solid #e0e0e0;
+  border-top: 1px solid #000;
 }
 
 .help li{
-  margin: 2px 0;
     padding: 2px 0 2px 22px;
     font-size: 12px;
     line-height: 19px;
     color: #6d6d6d;
 }
 
-.none{
-  text-align: center;
-  padding: 60px 0;
+
+.basketitem > a {
+  font-size: 1.2em;
+  color: #999;
+  margin-left: 10px;
+  text-decoration: none;
 }
 
-.basket1{
-  width: 800px;
-}
-
-
-/* 전체 컨테이너 */
-.basketitem {
-  width: 800px;
-  position: relative;
-
-  background: #fff;
-  box-sizing: border-box;
+.basketitem > a:hover {
+  color: #ff4d4f;
 }
 
 .prdBox{
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  border: 1px solid #e8e8e8;
-  margin-bottom: 5px;
+  margin: 0px 15px 10px 15px;
 }
 
-/* 체크박스 */
-.check {
-  margin-right: 10px;
-  position: relative;
-    opacity: 1;
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-    vertical-align: text-top;
-    border: 1px solid #000;
-    background: #fff;
-    transform: translate(5px,5px);
-}
 
-/* 썸네일 이미지 */
-.thumbnail img {
-  border-radius: 5px;
-  object-fit: cover;
-  margin: 0 20px 0 0;
-}
-
-/* 상품 정보 */
 .description {
   transform: translate(0,5px);
-  width: 500px;
+  width: 530px;
+  border: 1px solid #000;
 }
 
 .description .price li {
@@ -298,146 +363,7 @@ article h4{
   min-width: 80px;
 }
 
-/* 수량 조절 */
-.quentity {
+.couponbox{
   display: flex;
-  align-items: center;
-  margin: 0 347px 15px 188px;
-}
-
-.quentity .qtyBtnTotal {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.quentity input {
-  width: 50px;
-  height: 35px;
-  text-align: center;
-  margin: 0 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.quentity button {
-  width: 35px;
-  height: 35px;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  line-height: 1em;
-}
-
-.quentity button:hover {
-  background-color: #eee;
-}
-
-/* 버튼 그룹 */
-.buttonGroup a {
-  display: inline-block;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 0.9em;
-  color: #fff;
-  border-radius: 5px;
-  margin-right: 5px;
-}
-
-.buttonGroup .btnNormal {
-  background-color: #555;
-}
-
-.buttonGroup .btnNormal:hover {
-  background-color: #333;
-}
-
-.buttonGroup .btnSubmit {
-  background-color: #007bff;
-}
-
-.buttonGroup .btnSubmit:hover {
-  background-color: #0056b3;
-}
-
-/* 삭제 버튼 */
-.basketitem > a {
-  font-size: 1.2em;
-  color: #999;
-  margin-left: 10px;
-  text-decoration: none;
-}
-
-.basketitem > a:hover {
-  color: #ff4d4f;
-}
-
-.basket2{
-  width: 300px;
-}
-.totalSummary{
-  border: 1px solid #999;
-  padding: 20px;
-}
-.totalSummaryTitle{
-  font-size: 15px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.Price{
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.Price h4{
-  font-weight: 400;
-}
-
-.totalPrice{
-  border-top: 1px solid #e5e5e5;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.submitBtn{
-  transform: translateX(1px);
-  width: 299.5px;
-  height: 48px;
-  border: 1px solid #000;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: bold;
-    background: #000;
-    color: #ffffff;
-}
-.basket2 button{
-  margin-top: 10px !important;
-}
-
-.selectSubmitBtn{
-  transform: translateX(1px);
-  width: 299.5px;
-  height: 48px;
-  border: 1px solid #e0e0e0;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: bold;
-    color: #000;
-    background-color: #fff;
-}
-
-.submitBtn:hover{
-  color: #f9f9f9;
-  background-color: #444;
-}
-
-.selectSubmitBtn:hover{
-  border: 1px solid #000;
+  flex-wrap: wrap
 }

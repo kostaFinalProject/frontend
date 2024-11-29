@@ -380,3 +380,199 @@ input[type=text][readonly] {
   text-align: center;
   padding: 60px 0;
 }
+
+
+.prdBox{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+/* 체크박스 */
+.check {
+  margin-right: 10px;
+  position: relative;
+    opacity: 1;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    vertical-align: text-top;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+/* 썸네일 이미지 */
+.thumbnail img {
+  border-radius: 5px;
+  object-fit: cover;
+  margin: 0 20px 0 0;
+}
+
+/* 상품 정보 */
+.description {
+  transform: translate(0,5px);
+  width: 700px;
+}
+
+.description .price li {
+  font-size: 12px;
+  color: var(--font-color-lightgray);
+  line-height: 20px;
+}
+.description .prdName {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info li {
+  margin: 0 0 3px;
+  font-size: 12px;
+  color: var(--font-color-gray);
+}
+
+.discount{
+  font-size: 12px;
+    color: var(--font-color-lightgray);
+    line-height: 20px;
+    font-weight: 400;
+}
+
+
+.description .price li strong {
+  font-size: 12px;
+  color: var(--font-color-lightgray);
+  line-height: 20px;
+}
+
+.description .info,
+.description .optional {
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 5px;
+}
+
+.optional li{
+  margin-bottom: 5px;
+}
+
+.prdBox a{
+  transform: translate(0,5px);
+}
+/* 총 가격 */
+.sumprice {
+  transform: translate(215px,-10px);
+  display: flex;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000;
+  min-width: 80px;
+  align-items: center
+}
+
+/* 수량 조절 */
+.quentity {
+  display: flex;
+  align-items: center;
+  margin: 0 347px 15px 188px;
+}
+
+.quentity .qtyBtnTotal {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.quentity input {
+  width: 50px;
+  height: 35px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.quentity button {
+  width: 35px;
+  height: 35px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.quentity button:hover {
+  background-color: #eee;
+}
+
+.buttonGroup{
+  display: flex;
+  justify-content: flex-end;
+
+  align-items: flex-end;
+}
+
+
+/* 버튼 그룹 */
+.buttonGroup a {
+  display: inline-block;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 5px;
+  transform: translate(3px, -5px);
+}
+
+.buttonGroup a img{
+  transform: translate(28px,4px);
+}
+
+.buttonGroup .btnNormal {
+  background-color: #555;
+}
+
+.buttonGroup .btnNormal:hover {
+  background-color: #333;
+}
+
+.buttonGroup .orderBtn {
+  border: 1px solid #e0e0e0;
+    color: #000;
+    background-color: #fff;
+}
+
+.buttonGroup .Basketbtn {
+  border: 1px solid #000;
+    font-weight: bold;
+    background: #000;
+    color: #ffffff;
+}
+
+.Basketbtn:hover{
+  color: #f9f9f9;
+  background-color: #444;
+}
+
+.orderBtn:hover{
+  border: 1px solid #000;
+}
+
+.status{
+  border-bottom: 1px solid #000;
+}
+
+.status span{
+  margin-left: 5px;
+}
+
+.inquireCard{
+  border: 1px solid #000;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 10px;
+}
