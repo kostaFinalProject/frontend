@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/addressRegistForm.css">
+  <title>배송지등록</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="content" class="-frame">
+      <section class="manuwrap">
+        <h3>마이페이지</h3>
+        <article class="myshopmain">
+          <h4>나의 쇼핑활동</h4>
+          <ul>
+            <a href="">
+              <li>주문/배송조회</li>
+            </a>
+            <a href="">
+              <li>장바구니</li>
+            </a>
+            <a href="">
+              <li>관심상품</li>
+            </a>
+            <a href="">
+              <li>최근 본 상품</li>
+            </a>
+            <a href="">
+              <li>내가 쓴 게시글</li>
+            </a>
+          </ul>
+        </article>
+        <article class="myshopmain">
+          <h4>쇼핑혜택 안내</h4>
+          <ul>
+            <a href="">
+              <li>내 쿠폰정보</li>
+            </a>
+            <a href="">
+              <li>적립금 내역</li>
+            </a>
+          </ul>
+        </article>
+        <article class="myshopmain">
+          <h4>커뮤니티</h4>
+          <ul>
+            <a href="">
+              <li>NOTICE</li>
+            </a>
+            <a href="">
+              <li>Q&A</li>
+            </a>
+            <a href="">
+              <li>EVENT</li>
+            </a>
+          </ul>
+        </article>
+        <article class="myshopmain">
+          <h4>나의 정보 관리</h4>
+          <ul>
+            <a href="">
+              <li>배송지 관리</li>
+            </a>
+            <a href="">
+              <li>회원 정보 수정</li>
+            </a>
+            <a href="">
+              <li>로그아웃</li>
+            </a>
+          </ul>
+        </article>
+      </section>
+
+      <section class="contentwrap">
+        <div class="contentwraptitle"> 배송지 등록</div>
+        <div class="basketfield">
+          <table>
+            <colgroup>
+            <col style="width: 170px;">
+            <col style="width: auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  배송지명
+                  <img src="/img/ico_required.svg" alt="">
+                </th>
+                <td>
+                  <input type="text" class="inputTypeText" placeholder>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  성명
+                  <img src="/img/ico_required.svg" alt="">
+                </th>
+                <td>
+                  <input type="text" class="inputTypeText" placeholder>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  주소
+                  <img src="/img/ico_required.svg" alt="">
+                </th>
+                <td>
+                  <ul>
+                    <li>
+                      <input type="text" class="inputTypeText" placeholder="우편번호">
+                      <button id="SearchAddress" class="btnBasic" type="button" style="cursor: pointer;">주소검색</button>
+                    </li>
+                    <li>
+                      <input type="text" class="addressBox" placeholder="기본주소">
+                    </li>
+                    <li>                      
+                      <input type="text" class="addressBox" placeholder="나머지 주소(선택 입력 가능)">
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  일반전화
+                </th>
+                <td>
+                  <select name="" id="homeNumber1" class="callbox">
+                    <option value="02">02</option>
+                    <option value="031">031</option>
+                    <option value="032">032</option>
+                    <option value="033">033</option>
+                    <option value="041">041</option>
+                    <option value="042">042</option>
+                    <option value="043">043</option>
+                    <option value="044">044</option>
+                    <option value="051">051</option>
+                    <option value="052">052</option>
+                    <option value="053">053</option>
+                    <option value="054">054</option>
+                    <option value="055">055</option>
+                    <option value="061">061</option>
+                    <option value="062">062</option>
+                    <option value="063">063</option>
+                    <option value="064">064</option>
+                    <option value="0502">0502</option>
+                    <option value="0503">0503</option>
+                    <option value="0504">0504</option>
+                    <option value="0505">0505</option>
+                    <option value="0506">0506</option>
+                    <option value="0507">0507</option>
+                    <option value="070">070</option>
+                  </select>
+                  -
+                  <input type="text" id="homeNumber2" class="callbox">
+                  -
+                  <input type="text" id="homeNumber3" class="callbox">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  휴대전화
+                  <img src="/img/ico_required.svg" alt="">
+                </th>
+                <td>
+                  <select name="" id="phone1" class="callbox">
+                    <option value="031">010</option>
+                    <option value="032">011</option>
+                    <option value="033">016</option>
+                    <option value="041">017</option>
+                    <option value="042">018</option>
+                    <option value="043">019</option>
+                  </select>
+                  -
+                  <input type="text" id="phone2" class="callbox">
+                  -
+                  <input type="text" id="phone3" class="callbox">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="addressSave">        
+          <input type="checkbox">
+          <label for="">기본 배송지로 저장</label>
+        </div>
+        <div class="buttonGroup">
+          <a href="#none" class="Registbtn sizeS">배송지 등록</a>
+      </div>
+
+
+      <div class="help">
+        <h3>배송주소록 유의사항</h3>
+        <div class="inner">
+          <ul>
+            <li>배송 주소록은 최대 10개까지 등록할 수 있으며, 별도로 등록하지 않을 경우 최근 배송 주소록 기준으로 자동 업데이트 됩니다.</li>
+            <li>기본 배송지는 1개만 저장됩니다. 다른 배송지를 기본 배송지로 설정하시면 기본 배송지가 변경됩니다.</li>
+          </ul>
+        </div>
+      </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

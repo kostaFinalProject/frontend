@@ -158,7 +158,9 @@ article h4{
   align-items: center;
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #000;
+  
 }
 
 
@@ -171,99 +173,136 @@ article h4{
   padding: 0;
 }
 
-.couponRegister{
+.basketfield{
+  width :1130px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.help{
+  margin: 10px 0;
+}
+
+.help li{
+  margin: 2px 0;
+    padding: 2px 0 2px 22px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #6d6d6d;
+}
+
+.none{
   text-align: center;
-  margin: 0 0 50px;
-  text-align: center;
-
-  height: 160px;
+  padding: 60px 0;
 }
 
-.couponRegisterBox{
-    margin: 0 0 50px;
-    padding: 37px;
-    text-align: center;
-    border: 1px solid #e5e5e5;
-    border-top: 1px solid #000;
+.basket1{
+  width: 1130px;
 }
 
-  fieldset {
-    display: block;
-    margin-inline-start: 2px;
-    margin-inline-end: 2px;
-    padding-block-start: 0.35em;
-    padding-inline-start: 0.75em;
-    padding-inline-end: 0.75em;
-    padding-block-end: 0.625em;
-    min-inline-size: min-content;
-    border: none;
-}
-legend {
-  visibility: hidden;
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  width: 0;
-  height: 0;
-  line-height: 0;
-}
 
-.couponCode{
-  width: 342px;
+/* 전체 컨테이너 */
+.basketitem {
+  width: 1130px;
+  position: relative;
+
+  background: #fff;
   box-sizing: border-box;
-    font-size: 14px;
-    outline: none !important;
-    height: 40px;
-    line-height: 40px;
-    padding: 2px 4px 2px 15px;
-    border: 1px solid #e0e0e0;
-    color: var(--font-color-base);
 }
 
-.couponsubmit{
-  min-width: 135px;
-  padding: 13px 20px;
+.prdBox{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+/* 체크박스 */
+.check {
+  margin-right: 10px;
+  position: relative;
+    opacity: 1;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    vertical-align: text-top;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+td{
+  background-color: #ffffff;
+  vertical-align: middle;
+  border: none;
+  height: 60px;
+  text-align: center;
   font-size: 13px;
-  margin: 0 0 0 6px;
-  border: 1px solid #000;
-  font-weight: bold;
-  background: #000;
-  color: #ffffff;
+}
+
+td a{
+  border: 1px solid #868686;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+td a:hover{
+  border: 1px solid #cfcfcf;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+tbody{
+  border-bottom: 1px solid #e8e8e8;
+}
+
+
+.buttonGroup{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+/* 버튼 그룹 */
+.buttonGroup a {
+  display: inline-block;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #fff;
   border-radius: 5px;
-}
-
-input{
-  width: 342px;
-  box-sizing: border-box;
-  font-size: 14px;
+  margin-right: 5px;
+  width: 135px;
+  height: 41px;
 }
 
 
-.couponsubmit:hover{
+.buttonGroup .btnNormal:hover {
+  background-color: #333;
+}
+
+.buttonGroup .selectDeleteBtn {
+  border: 1px solid #e0e0e0;
+    color: #000;
+    background-color: #fff;
+}
+
+.buttonGroup .addressRegistbtn {
+  border: 1px solid #000;
+    font-weight: bold;
+    background: #000;
+    color: #ffffff;
+}
+
+.addressRegistbtn:hover{
   color: #f9f9f9;
   background-color: #444;
 }
 
-.textInfo{
-  color: #757575;;
-    font-size: 12px;
-    line-height: 22px;
-    font-weight: normal;
-    margin-top: 10px;
-}
-
-.none{
-  color: #757575;
-  font-size: 12px;
-  line-height: 22px;
-  font-weight: normal;
-  margin-top: 10px;
-  padding: 120px 0;
-  text-align: center;
-}
-
-.couponlist{
-  border-bottom: 1px solid #e5e5e5;
+.selectDeleteBtn:hover{
+  border: 1px solid #000;
 }
 
 .help h3{
@@ -280,93 +319,4 @@ input{
     font-size: 12px;
     line-height: 19px;
     color: #6d6d6d;
-}
-
-
-.basketitem > a {
-  font-size: 1.2em;
-  color: #999;
-  margin-left: 10px;
-  text-decoration: none;
-}
-
-.basketitem > a:hover {
-  color: #ff4d4f;
-}
-
-.prdBox{
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  margin: 0px 15px 10px 15px;
-}
-
-.coupondetail{
-  margin-left: 5px;
-}
-
-.description {
-  transform: translate(0,5px);
-  width: 530px;
-  border: 1px solid #000;
-}
-
-.description .price li {
-  font-size: 12px;
-  color: var(--font-color-lightgray);
-  line-height: 20px;
-}
-.description .prdName {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.info li {
-  margin: 0 0 3px;
-  font-size: 12px;
-  color: var(--font-color-gray);
-}
-
-.discount{
-  font-size: 12px;
-    color: var(--font-color-lightgray);
-    line-height: 20px;
-    font-weight: 400;
-}
-
-
-.description .price li strong {
-  font-size: 12px;
-  color: var(--font-color-lightgray);
-  line-height: 20px;
-}
-
-.description .info,
-.description .optional {
-  font-size: 0.85em;
-  color: #777;
-  margin-top: 5px;
-}
-
-.optional li{
-  margin-bottom: 5px;
-}
-
-.prdBox a{
-  transform: translate(0,5px);
-}
-/* 총 가격 */
-.sumprice {
-  transform: translate(0,5px);
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #000;
-  min-width: 80px;
-}
-
-.couponbox{
-  display: flex;
-  flex-wrap: wrap
 }
