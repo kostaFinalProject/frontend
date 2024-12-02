@@ -158,14 +158,12 @@ article h4{
   align-items: center;
   font-size: 30px;
   font-weight: bold;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #000;
   
 }
 
 
 .menu {
-  margin: 0 0 20px;
+  margin: 50px 0 0;
   border-bottom: 1px solid #868686;
   background: #fff;
   box-sizing: border-box;

@@ -32,7 +32,6 @@ ul {
 
 li{
   display: list-item;
-  text-align: -webkit-match-parent;
   list-style: none;
   color: #757575;
 }
@@ -103,53 +102,11 @@ img{
   gap: 20px; /* 좌우 간격 */
 }
 
-/* 왼쪽 메뉴 스타일 */
-.manuwrap {
-  width: 200px; /* 고정 너비 */
-  font-size: 16px; /* 글씨 크기 */
-  line-height: 1.8; /* 행간 */
-  background-color: #ffffff; /* 배경색 */
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.manuwrap h3{
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.manuwrap article{
-  line-height: 1,5;
-}
-
-.manuwrap article ul{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0 5px;
-}
-
-article h4{
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0 0 20px;
-}
-
-.manuwrap article ul li a{
-  color: var(--font-color-gray);
-}
-
 /* 오른쪽 콘텐츠 스타일 */
+
 .contentwrap {
-  width: 1130px;
-  background-color: #ffffff; /* 배경색 */
+  width: 1360px;
 }
-
-.typeNav{
-  position: relative;
-}
-
 
 .contentwraptitle{
   height: 50px;
@@ -161,51 +118,9 @@ article h4{
   margin-bottom: 50px;
 }
 
-
-.menu {
-  margin: 0 0 20px;
-  border-bottom: 1px solid #868686;
-  background: #fff;
-  box-sizing: border-box;
-  height: 53px;
-  padding: 0;
-}
-
-.basketfield{
-  width :1130px;
-  display:flex;
-  justify-content: space-between;
-}
-
-.help{
-  margin: 10px 0;
-}
-
-.help li{
-  margin: 2px 0;
-    padding: 2px 0 2px 22px;
-    font-size: 12px;
-    line-height: 19px;
-    color: #6d6d6d;
-}
-
-.none{
-  text-align: center;
-  padding: 60px 0;
-}
-
-.basket1{
-  width: 1130px;
-}
-
-
-/* 전체 컨테이너 */
-.basketitem {
-  width: 1130px;
-  position: relative;
-
-  background: #fff;
-  box-sizing: border-box;
+.contentframe{
+  width: 1360px;
+  align-content: center;
 }
 
 .prdBox{
@@ -214,7 +129,10 @@ article h4{
   flex-wrap: wrap;
   border: 1px solid #e8e8e8;
   margin-bottom: 5px;
+  padding: 5px;
 }
+
+/* 체크박스 */
 
 /* 썸네일 이미지 */
 .thumbnail img {
@@ -274,7 +192,7 @@ article h4{
 .prdBox a{
   transform: translate(0,5px);
 }
-/* 총 가격 */
+
 .sumprice {
   transform: translate(215px,-10px);
   display: flex;
@@ -285,57 +203,66 @@ article h4{
   align-items: center
 }
 
-.buttonGroup{
-  display: flex;
-  justify-content: flex-end;
-
-  align-items: flex-end;
-}
-
-
-/* 버튼 그룹 */
-.buttonGroup a {
-  display: inline-block;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 0.9em;
-  color: #fff;
+.contentframe{
+  border: 1px solid #e6e6e6;
+  margin-bottom: 10px;
   border-radius: 5px;
-  margin-right: 5px;
-  transform: translate(3px, -5px);
 }
 
-.buttonGroup a img{
-  transform: translate(28px,4px);
+.frametitle{
+  font-weight: bold;
 }
 
-.buttonGroup .btnNormal {
-  background-color: #555;
+.spacebetween{
+  display: flex;
+  justify-content: space-between;
 }
 
-.buttonGroup .btnNormal:hover {
-  background-color: #333;
+.basic{
+  padding: 10px;
 }
 
-.buttonGroup .orderBtn {
-  border: 1px solid #e0e0e0;
-    color: #000;
-    background-color: #fff;
+.selectbox{
+  width: 300px;
+  padding: 10px;
 }
 
-.buttonGroup .Basketbtn {
-  border: 1px solid #000;
-    font-weight: bold;
-    background: #000;
-    color: #ffffff;
+.selectbox select{
+  width: inherit;
+  border-radius: 5px;
 }
 
-.Basketbtn:hover{
-  color: #f9f9f9;
-  background-color: #444;
+.flex{
+  display: flex;
 }
 
-.orderBtn:hover{
-  border: 1px solid #000;
+.money{
+  margin-left: 5px;
+}
+
+.pointinput{
+  width: 300px;
+  height: 30px;
+}
+
+a .btnFade {
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  font-size: 16px;
+}
+
+.btnFade.btnHover:hover {
+  background: #c8c8c8;
+}
+
+a{
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid #c8c8c8;
+  padding: 5px;
+  border-radius: 10px;
 }

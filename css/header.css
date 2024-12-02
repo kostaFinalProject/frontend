@@ -137,9 +137,7 @@ img.search {
 
 }
 
-#aaa{
-  padding: 5px;
-}
+
 
 .category img {
   width: 28px;
@@ -186,10 +184,29 @@ img.search {
   font-size: 23px;
 }
 
-.submenu {
 
-  position: relative; /* 부모 요소 바로 아래에 위치하도록 조정 */
-  border: 1px solid #f5f5f5;
+.hasChild {
+  position: relative; /* submenu의 기준점 */
+}
+
+.categorypond a{
+  position: relative; /* submenu의 기준점 */
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+}
+
+.haschild:hover .submenu1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+#aaa {
+  position: relative; /* 기준점 설정 */
+}
+
+.submenu1 {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -203,48 +220,49 @@ img.search {
   margin-top: 10px;
 }
 
-.hasChild {
-  position: relative; /* submenu의 기준점 */
+.a1{
+  transform: translateX(-180px); /* 필요에 따라 미세 조정 */
 }
 
-.categorypond a{
-  position: relative; /* submenu의 기준점 */
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 23px;
+.a2{
+  transform: translateX(-268px); /* 필요에 따라 미세 조정 */
 }
 
-.haschild:hover .submenu {
-  opacity: 1;
-  visibility: visible;
+.a3{
+  transform: translateX(-357px); /* 필요에 따라 미세 조정 */
 }
 
-.submenu li {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 17px;
-  position: relative;
-  min-height: 30px;
-  display: flex;
+.a4{
+  transform: translateX(-445px); /* 필요에 따라 미세 조정 */
+}
+
+.a5{
+  transform: translateX(-533px); /* 필요에 따라 미세 조정 */
+}
+
+
+.categorycircle img {
+  transform: translateY(0px) !important;
+  width: 130px !important; 
+  height: 130px !important;
+  object-fit: scale-down;
+}
+
+.categorycircle{
   align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  /* background-color: #999; */
+  overflow: hidden;
 }
 
-.submenu li a{
-  color: #999;
-  display: block;
-  line-height: 1.5;
-  padding: 5px 15px;
-  height: 100%;
-  width: 100%;
-  font-weight: 500;
-  box-sizing: border-box;
+.category-link {
+  font-weight: normal;
+  text-decoration: none;
+  color: inherit;
 }
 
-.submenu li:hover a {
-  color: var(--font-color-base);
-  display: block;
-  line-height: 1.5;
-  padding: 5px 15px;
-  height: 100%;
-  width: 100%;
-  font-weight: 500;
-  box-sizing: border-box;
+.category-link.active {
+  font-weight: bold;
 }
