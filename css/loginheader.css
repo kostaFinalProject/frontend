@@ -206,7 +206,7 @@ img.search {
   position: relative; /* 기준점 설정 */
 }
 
-/* .submenu1 {
+.submenu1 {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -218,78 +218,51 @@ img.search {
   white-space: nowrap;
   min-width: 140px;
   margin-top: 10px;
-} */
-
-.a1 {
-  transform: translateX(-185px); /* 필요에 따라 미세 조정 */
 }
 
-.a2 {
-  transform: translateX(-273px); /* 필요에 따라 미세 조정 */
-}
-
-.a3 {
-  transform: translateX(-362px); /* 필요에 따라 미세 조정 */
-}
-
-.a4 {
-  transform: translateX(-450px); /* 필요에 따라 미세 조정 */
-}
-
-.a5 {
-  transform: translateX(-538px); /* 필요에 따라 미세 조정 */
-}
-
-/* 서브 메뉴 항목 */
-.submenu1 {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0s 0.3s, transform 0.3s;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.a1{
   transform: translateX(-180px); /* 필요에 따라 미세 조정 */
 }
 
-.submenu1.selected {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s, visibility 0s 0s, transform 0.3s;
+.a2{
+  transform: translateX(-268px); /* 필요에 따라 미세 조정 */
 }
 
-
-
-.category-link {
-  text-decoration: none;
-  color: #333; /* 기본 글씨 색 */
-  font-weight: normal; /* 기본 글씨 두께 */
-  transition: font-weight 0.3s, color 0.3s;
+.a3{
+  transform: translateX(-357px); /* 필요에 따라 미세 조정 */
 }
 
-/* hover 상태에서 글씨 진하게 */
-.category-link:hover {
-  font-weight: bold !important;
-  color: #000 !important; /* hover시 글씨 색을 변경 */
+.a4{
+  transform: translateX(-445px); /* 필요에 따라 미세 조정 */
 }
 
-/* 클릭했을 때 글씨 진하게 */
-.hasChild.selected .category-link {
-  font-weight: bold !important;
-  color: #000 !important; /* 클릭 시 글씨 색 변경 */
+.a5{
+  transform: translateX(-533px); /* 필요에 따라 미세 조정 */
 }
 
-.categorycircle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px; /* 이미지 크기 */
-  height: 100px; /* 이미지 크기 */
-  margin: 5px; /* 간격 추가 */
-}
 
 .categorycircle img {
-  max-width: 100%; /* 이미지가 부모의 크기를 넘지 않도록 */
-  height: auto; /* 이미지 비율 유지 */
+  transform: translateY(0px) !important;
+  width: 130px !important; 
+  height: 130px !important;
+  object-fit: scale-down;
+}
+
+.categorycircle{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  /* background-color: #999; */
+  overflow: hidden;
+}
+
+.category-link {
+  font-weight: normal;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-link.active {
+  font-weight: bold;
 }

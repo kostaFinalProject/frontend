@@ -241,13 +241,19 @@ article{
   max-width: 100%;
   display: block;
   text-size-adjust: 100%;
-  background-image: url('https://cafe24.poxo.com/ec01/enemy0000/fYw07Q+e08011Z5Qzbz300jECh5aaMmmDMQ7QH7NAQ9NK2EXhqgvmfbzfda0mDNO/Jp2ZgYE1irrrDpzeiP8fA==/_/web/product/big/202407/2c251619948664c4233ec74c0dcb12a6.jpg');
+  object-fit: cover; /* 이미지가 슬라이드 크기에 맞게 자르기 */
   font-size: 0;
-
   background-size: cover;
   /* 이미지 크기를 부모에 맞게 조정 */
   background-position: center;
   /* 이미지 가운데 정렬 */
+}
+
+.board_img img{
+  object-fit: cover; /* 이미지가 슬라이드 크기에 맞게 자르기 */
+  width: 278.5px;
+  height: 348.125px;
+  overflow: hidden;
 }
 
 .board_list_body .item .board_content {
@@ -297,7 +303,6 @@ article{
 
 .board_list_body .item .board_price>span:first-child {
   padding-left: 0;
-  text-decoration: line-through;
 }
 
 .board_list_body .item .board_name {
