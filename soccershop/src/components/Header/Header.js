@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 
 const Header = () => {
   const [visibleSubmenu, setVisibleSubmenu] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+  useEffect(() => {
+    console.log("Header에서 isLoggedIn 상태:", isLoggedIn);
+  }, [isLoggedIn]); // isLoggedIn 상태가 변경될 때마다 출력
 
   const handleCategoryClick = (index) => {
     setVisibleSubmenu(visibleSubmenu === index ? null : index);
@@ -14,13 +19,33 @@ const Header = () => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
+    // 클릭 이벤트 리스너 추가
     document.addEventListener("click", handleDocumentClick);
 
+    // 카테고리 링크 마우스오버/아웃 이벤트 추가
+    const categoryLinks = document.querySelectorAll(".category-link");
+    categoryLinks.forEach((link, index) => {
+      const submenu = link.nextElementSibling;
+      if (submenu) {
+        link.addEventListener("mouseover", () =>
+          submenu.classList.add(`a${index + 1}`)
+        );
+        link.addEventListener("mouseout", () =>
+          submenu.classList.remove(`a${index + 1}`)
+        );
+      }
+    });
+
+    // 컴포넌트 언마운트 시 이벤트 리스너 제거
     return () => {
       document.removeEventListener("click", handleDocumentClick);
+      categoryLinks.forEach((link) => {
+        link.removeEventListener("mouseover", null);
+        link.removeEventListener("mouseout", null);
+      });
     };
-  }, []);
+  }, []); // 빈 배열로 설정하여 한 번만 실행
 
   const categories = [
     {
@@ -259,25 +284,25 @@ const Header = () => {
   ];
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const categoryLinks = document.querySelectorAll(".category-link");
-  
-    categoryLinks.forEach((link, index) => {
-      link.addEventListener("mouseover", () => {
-        const submenu = link.nextElementSibling; // a 태그 뒤의 <ul>을 선택
-        if (submenu) {
-          submenu.classList.add(`a${index + 1}`);
-        }
-      });
-  
-      link.addEventListener("mouseout", () => {
-        const submenu = link.nextElementSibling;
-        if (submenu) {
-          submenu.classList.remove(`a${index + 1}`);
-        }
-      });
-    });
-  });
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const categoryLinks = document.querySelectorAll(".category-link");
+
+  //   categoryLinks.forEach((link, index) => {
+  //     link.addEventListener("mouseover", () => {
+  //       const submenu = link.nextElementSibling; // a 태그 뒤의 <ul>을 선택
+  //       if (submenu) {
+  //         submenu.classList.add(`a${index + 1}`);
+  //       }
+  //     });
+
+  //     link.addEventListener("mouseout", () => {
+  //       const submenu = link.nextElementSibling;
+  //       if (submenu) {
+  //         submenu.classList.remove(`a${index + 1}`);
+  //       }
+  //     });
+  //   });
+  // });
 
   return (
     <header>
@@ -298,20 +323,45 @@ const Header = () => {
               <img src="/img/search.svg" alt="검색 버튼" className="search-icon" />
             </a>
           </div>
-          <div className="right">
-            <a href="/login">
-              <img
-                src="/img/box-arrow-in-right.svg"
-                alt="로그인"
-                className="icon"
-              />
-              <span>로그인</span>
-            </a>
-            <a href="/signup">
-              <img src="/img/person-add.svg" alt="회원가입" className="icon" />
-              <span>회원가입</span>
-            </a>
-          </div>
+
+          {isLoggedIn ? (
+            <div className="right">
+              <a href="/mypage">
+                <img
+                  src="/img/icon_header_mypage_b_512.svg"
+                  alt="마이페이지"
+                  className="icon"
+                />
+                <span>마이페이지</span>
+              </a>
+              <a href="/basket">
+                <img src="/img/basket3.svg" alt="장바구니" className="icon" />
+                <span>장바구니</span>
+              </a>
+              <a href="/" onClick={() => setIsLoggedIn(false)}>
+                <img src="/img/box-arrow-right.svg" alt="장바구니" className="icon" />
+                <span>로그아웃</span>
+              </a>
+            </div>
+          ) : (
+            <div className="right">
+              <a href="/login">
+                <img
+                  src="/img/box-arrow-in-right.svg"
+                  alt="로그인"
+                  className="icon"
+                />
+                <span>로그인</span>
+              </a>
+              <a href="/signup">
+                <img src="/img/person-add.svg" alt="회원가입" className="icon" />
+                <span>회원가입</span>
+              </a>
+            </div>
+          )}
+
+
+
         </div>
 
         <div className="headerNavContainer">
@@ -330,9 +380,8 @@ const Header = () => {
               {categories.map((category, index) => (
                 <li
                   key={index}
-                  className={`hasChild categorypond ${
-                    visibleSubmenu === index ? "selected" : ""
-                  }`}
+                  className={`hasChild categorypond ${visibleSubmenu === index ? "selected" : ""
+                    }`}
                 >
                   <a
                     href={`/item-sort.html?category=${category.name}`}

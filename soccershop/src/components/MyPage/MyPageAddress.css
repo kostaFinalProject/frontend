@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-.addressRegistFormcontainer #content{
+.MyPageAddresscontainer #content{
   padding-bottom: 150px;
 }
 
@@ -21,7 +21,7 @@ body{
   font-family: 'Jost', 'Pretendard', '맑은고딕', 'Malgun Gothic', '돋움', Dotum, Helvetica, Arial, AppleGothic, sans-serif;
 }
 
-.addressRegistFormcontainer ul {
+.MyPageAddresscontainer ul {
   display: block;
   list-style-type: disc;
   margin-block-start: 1em;
@@ -30,54 +30,54 @@ body{
   margin-inline-end: 0px;
 }
 
-.addressRegistFormcontainer li{
+.MyPageAddresscontainer li{
   display: list-item;
   text-align: -webkit-match-parent;
   list-style: none;
   color: #757575;
 }
 
-.addressRegistFormcontainer a{
+.MyPageAddresscontainer a{
   text-decoration: none;
   font-size: 13px;
   color: #010101;
 }
 
-.addressRegistFormcontainer thead {
+.MyPageAddresscontainer thead {
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
 }
 
-.addressRegistFormcontainer table {
+.MyPageAddresscontainer table {
   width: 100%;
   border: 0;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-.addressRegistFormcontainer tbody {
+.MyPageAddresscontainer tbody {
   display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
 }
 
-.addressRegistFormcontainer th {
+.MyPageAddresscontainer .th1 {
   background-color: #f8f8f8;
   border-bottom: 1px solid #e8e8e8;
   padding: 15px 10px 16px;
 }
 
-.addressRegistFormcontainer button{
+.MyPageAddresscontainer button{
   border: none;
   margin: 0 0 0 -1px !important;
 }
 
-.addressRegistFormcontainer div{
+.MyPageAddresscontainer div{
   display: block;
 }
 
-.addressRegistFormcontainer select{
+.MyPageAddresscontainer select{
   background: #fff;
   background-size: 10px;
   padding-left: 10px;
@@ -91,12 +91,12 @@ body{
   vertical-align: middle;
 }
 
-.addressRegistFormcontainer img{
+.MyPageAddresscontainer img{
   transform: translate(0,5px);
 }
 
 /* 메인 컨테이너 스타일 */
-.addressRegistFormcontainer #content {
+.MyPageAddresscontainer #content {
   width: 1360px; /* 전체 너비 */
   margin: 0 auto; /* 중앙 정렬 */
   display: flex; /* 플렉스 컨테이너 */
@@ -104,7 +104,7 @@ body{
 }
 
 /* 왼쪽 메뉴 스타일 */
-.addressRegistFormcontainer .manuwrap {
+.MyPageAddresscontainer .manuwrap {
   width: 200px; /* 고정 너비 */
   font-size: 16px; /* 글씨 크기 */
   line-height: 1.8; /* 행간 */
@@ -114,74 +114,74 @@ body{
   gap: 40px;
 }
 
-.addressRegistFormcontainer .manuwrap h3{
+.MyPageAddresscontainer .manuwrap h3{
   font-size: 18px;
   font-weight: bold;
 }
 
-.addressRegistFormcontainer .manuwrap article{
+.MyPageAddresscontainer .manuwrap article{
   line-height: 1,5;
 }
 
-.addressRegistFormcontainer .manuwrap article ul{
+.MyPageAddresscontainer .manuwrap article ul{
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 0 5px;
 }
 
-.addressRegistFormcontainer article h4{
+.MyPageAddresscontainer article h4{
   font-size: 15px;
   font-weight: bold;
   margin: 0 0 20px;
 }
 
-.addressRegistFormcontainer .manuwrap article ul li a{
+.MyPageAddresscontainer .manuwrap article ul li a{
   color: var(--font-color-gray);
 }
 
 /* 오른쪽 콘텐츠 스타일 */
-.addressRegistFormcontainer .contentwrap {
+.MyPageAddresscontainer .contentwrap {
   width: 1130px;
   background-color: #ffffff; /* 배경색 */
 }
 
-.addressRegistFormcontainer .typeNav{
+.MyPageAddresscontainer .typeNav{
   position: relative;
 }
 
 
-.addressRegistFormcontainer .contentwraptitle{
+.MyPageAddresscontainer .contentwraptitle{
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
   font-weight: bold;
+  
 }
 
 
-.addressRegistFormcontainer .menu {
+.MyPageAddresscontainer .menu {
+  margin: 50px 0 0;
   border-bottom: 1px solid #868686;
-  margin-top: 50px;
   background: #fff;
   box-sizing: border-box;
   height: 53px;
-  padding-bottom: 50px;
-  margin-bottom: 0px
+  padding: 0;
 }
 
-.addressRegistFormcontainer .basketfield{
+.MyPageAddresscontainer .basketfield1{
   width :1130px;
   display:flex;
   justify-content: space-between;
 }
 
-.addressRegistFormcontainer .help{
+.MyPageAddresscontainer .help{
   margin: 10px 0;
 }
 
-.addressRegistFormcontainer .help li{
+.MyPageAddresscontainer .help li{
   margin: 2px 0;
     padding: 2px 0 2px 22px;
     font-size: 12px;
@@ -189,18 +189,18 @@ body{
     color: #6d6d6d;
 }
 
-.addressRegistFormcontainer .none{
+.MyPageAddresscontainer .none{
   text-align: center;
   padding: 60px 0;
 }
 
-.addressRegistFormcontainer .basket1{
+.MyPageAddresscontainer .basket1{
   width: 1130px;
 }
 
 
 /* 전체 컨테이너 */
-.addressRegistFormcontainer .basketitem {
+.MyPageAddresscontainer .basketitem1 {
   width: 1130px;
   position: relative;
 
@@ -208,81 +208,63 @@ body{
   box-sizing: border-box;
 }
 
-.addressRegistFormcontainer th img{
-  vertical-align: top;
+.MyPageAddresscontainer .prdBox1{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
-.addressRegistFormcontainer td{
-  padding: 10px 20px;
+/* 체크박스 */
+.MyPageAddresscontainer .check {
+  margin-right: 10px;
+  position: relative;
+    opacity: 1;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    vertical-align: text-top;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.MyPageAddresscontainer td{
+  background-color: #ffffff;
+  vertical-align: middle;
+  border: none;
+  height: 60px;
+  text-align: center;
+  font-size: 13px;
+  padding: 15px 10px 16px;
+}
+
+.MyPageAddresscontainer td a{
+  border: 1px solid #868686;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.MyPageAddresscontainer td a:hover{
+  border: 1px solid #cfcfcf;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.MyPageAddresscontainer tbody{
   border-bottom: 1px solid #e8e8e8;
 }
 
-.addressRegistFormcontainer input[type=text]:hover{
-  border-color: #000;
-}
 
-.addressRegistFormcontainer .inputTypeText{
-  width: 290px;
-  box-sizing: border-box;
-  font-size: 14px;
-  height: 40px;
-  line-height: 40px;
-  padding: 2px 4px 2px 15px;
-  border: 1px solid #e0e0e0;
-}
-
-.addressRegistFormcontainer .callbox{
-  width: 86px;
-  box-sizing: border-box;
-  font-size: 14px;
-  height: 40px;
-  line-height: 40px;
-  padding: 2px 4px 2px 15px;
-  border: 1px solid #e0e0e0;
-}
-
-.addressRegistFormcontainer .addressBox{
-  width: 450px;
-  box-sizing: border-box;
-  font-size: 14px;
-  height: 40px;
-  line-height: 40px;
-  padding: 2px 4px 2px 15px;
-  border: 1px solid #e0e0e0;
-  margin-top: 5px;
-}
-
-.addressRegistFormcontainer .btnBasic {
-  display: inline-block;
-  padding: 12px 20px;
-  height: 40px;
-  font-size: 13px;
-  box-sizing: border-box;
-  border: 1px solid #bcbcbc;
-  line-height: 1;
-  font-weight: normal;
-  text-decoration: none;
-  vertical-align: middle;
-  word-spacing: -0.5px;
-  letter-spacing: 0;
-  text-align: center;
-  white-space: nowrap;
-  color: #000;
-  background-color: #fff;
-}
-
-.addressRegistFormcontainer .addressSave{
+.MyPageAddresscontainer .buttonGroup{
+  margin-top: 30px;
   display: flex;
-  justify-content: end;
-  margin: 10px
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.addressRegistFormcontainer .buttonGroup{
-  display: flex;
-  justify-content: flex-end;
-}
 
-.addressRegistFormcontainer .buttonGroup a {
+/* 버튼 그룹 */
+.MyPageAddresscontainer .buttonGroup a {
   display: inline-block;
   padding: 8px 15px;
   text-align: center;
@@ -295,42 +277,45 @@ body{
   height: 41px;
 }
 
-.addressRegistFormcontainer .buttonGroup .btnNormal:hover {
+
+.MyPageAddresscontainer .buttonGroup .btnNormal:hover {
   background-color: #333;
 }
 
-.addressRegistFormcontainer .buttonGroup .Registbtn {
+.MyPageAddresscontainer .buttonGroup .selectDeleteBtn {
+  border: 1px solid #e0e0e0;
+    color: #000;
+    background-color: #fff;
+}
+
+.MyPageAddresscontainer .buttonGroup .addressRegistbtn {
   border: 1px solid #000;
     font-weight: bold;
     background: #000;
     color: #ffffff;
 }
 
-.addressRegistFormcontainer .Registbtn:hover{
+.MyPageAddresscontainer .addressRegistbtn:hover{
   color: #f9f9f9;
   background-color: #444;
 }
 
-.addressRegistFormcontainer .help h3{
+.MyPageAddresscontainer .selectDeleteBtn:hover{
+  border: 1px solid #000;
+}
+
+.MyPageAddresscontainer .help h3{
   margin: 20px 0;
 }
 
-.addressRegistFormcontainer .inner{
+.MyPageAddresscontainer .inner{
   border: 1px solid #e0e0e0;
   border-top: 1px solid #000;
 }
 
-.addressRegistFormcontainer .help li{
+.MyPageAddresscontainer .help li{
     padding: 2px 0 2px 22px;
     font-size: 12px;
     line-height: 19px;
     color: #6d6d6d;
-}
-
-.addressRegistFormcontainer #addressnumber, #address{
-  background: #f9f9f9;
-}
-
-.addressRegistFormcontainer .typeNav{
-  position: relative;
 }
