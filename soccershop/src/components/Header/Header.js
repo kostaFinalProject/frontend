@@ -19,33 +19,26 @@ const Header = () => {
     }
   };
 
-  useEffect(() => {
-    // 클릭 이벤트 리스너 추가
-    document.addEventListener("click", handleDocumentClick);
-
-    // 카테고리 링크 마우스오버/아웃 이벤트 추가
+  document.addEventListener("DOMContentLoaded", () => {
     const categoryLinks = document.querySelectorAll(".category-link");
-    categoryLinks.forEach((link, index) => {
-      const submenu = link.nextElementSibling;
-      if (submenu) {
-        link.addEventListener("mouseover", () =>
-          submenu.classList.add(`a${index + 1}`)
-        );
-        link.addEventListener("mouseout", () =>
-          submenu.classList.remove(`a${index + 1}`)
-        );
-      }
-    });
 
-    // 컴포넌트 언마운트 시 이벤트 리스너 제거
-    return () => {
-      document.removeEventListener("click", handleDocumentClick);
-      categoryLinks.forEach((link) => {
-        link.removeEventListener("mouseover", null);
-        link.removeEventListener("mouseout", null);
+    categoryLinks.forEach((link, index) => {
+      link.addEventListener("mouseover", () => {
+        const submenu = link.nextElementSibling; // a 태그 뒤의 <ul>을 선택
+        if (submenu) {
+          submenu.classList.add(`a${index + 1}`);
+        }
       });
-    };
-  }, []); // 빈 배열로 설정하여 한 번만 실행
+
+      link.addEventListener("mouseout", () => {
+        const submenu = link.nextElementSibling;
+        if (submenu) {
+          submenu.classList.remove(`a${index + 1}`);
+        }
+      });
+    });
+  });
+
 
   const categories = [
     {
@@ -284,25 +277,7 @@ const Header = () => {
   ];
 
 
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   const categoryLinks = document.querySelectorAll(".category-link");
 
-  //   categoryLinks.forEach((link, index) => {
-  //     link.addEventListener("mouseover", () => {
-  //       const submenu = link.nextElementSibling; // a 태그 뒤의 <ul>을 선택
-  //       if (submenu) {
-  //         submenu.classList.add(`a${index + 1}`);
-  //       }
-  //     });
-
-  //     link.addEventListener("mouseout", () => {
-  //       const submenu = link.nextElementSibling;
-  //       if (submenu) {
-  //         submenu.classList.remove(`a${index + 1}`);
-  //       }
-  //     });
-  //   });
-  // });
 
   return (
     <header>

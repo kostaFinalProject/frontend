@@ -12,6 +12,7 @@ import MyPageCoupon from "./components/MyPage/MyPageCoupon";
 import MyPageMileage from "./components/MyPage/MyPageMileage";
 import MyPageAddress from "./components/MyPage/MyPageAddress";
 import AddressRegisterForm from "./components/MyPage/AddressRegisterForm";
+import StyleModify from "./components/MyPage/StyleModify";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -46,6 +47,7 @@ function App() {
         <Route path="/MyPage/mileage" element={<MyPageMileage />} />
         <Route path="/MyPage/address" element={<MyPageAddress />} />
         <Route path="/MyPage/address/addressregist" element={<AddressRegisterForm />} />
+        <Route path="/MyPage/stylemodify" element={<StyleModify />} />
       </Routes>
     </BrowserRouter>
   );

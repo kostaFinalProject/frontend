@@ -40,10 +40,13 @@ const MyPageAddress = () => {
             </ul>
           </article>
           <article className="myshopmain">
-            <h4>커뮤니티</h4>
+            <h4>스타일</h4>
             <ul>
+              <a href="/MyPage/stylemodify">
+                <li>프로필 관리</li>
+              </a>
               <a href="">
-                <li>내가 쓴 게시글</li>
+                <li>내 스타일</li>
               </a>
             </ul>
           </article>
