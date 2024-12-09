@@ -6,10 +6,6 @@ import 'swiper/css/navigation';
 import './Main.css';
 
 const Main = () => {
-  const [bestItems, setBestItems] = useState([]);
-  const [newItems, setNewItems] = useState([]);
-
-  useEffect(() => {
     const items = [
       {
         id: 1,
@@ -104,28 +100,42 @@ const Main = () => {
       // 나머지 아이템들도 동일하게 작성...
     ];
 
-    const sortedBySales = [...items].sort((a, b) => b.soldCount - a.soldCount);
-    const sortedByIdDesc = [...items].sort((a, b) => b.id - a.id);
-
-    setBestItems(sortedBySales.slice(0, 8));
-    setNewItems(sortedByIdDesc.slice(0, 8));
-
-    const loadBestItems = () => {
-      setBestItems(prev => [...prev, ...sortedBySales.slice(prev.length, prev.length + 8)]);
-    };
-
-    const loadNewItems = () => {
-      setNewItems(prev => [...prev, ...sortedByIdDesc.slice(prev.length, prev.length + 8)]);
-    };
-
-    document.getElementById("bestMoreBtn").addEventListener("click", loadBestItems);
-    document.getElementById("newMoreBtn").addEventListener("click", loadNewItems);
-
-    return () => {
-      document.getElementById("bestMoreBtn").removeEventListener("click", loadBestItems);
-      document.getElementById("newMoreBtn").removeEventListener("click", loadNewItems);
-    };
-  }, []);
+    const [bestItems, setBestItems] = useState([]);
+    const [newItems, setNewItems] = useState([]);
+    const [allItems, setAllItems] = useState(items); // 전체 아이템을 저장하는 상태 추가
+    
+    useEffect(() => {
+      const sortedBySales = [...items].sort((a, b) => b.soldCount - a.soldCount);
+      const sortedByIdDesc = [...items].sort((a, b) => b.id - a.id);
+    
+      setBestItems(sortedBySales.slice(0, 8));
+      setNewItems(sortedByIdDesc.slice(0, 8));
+    
+      const loadBestItems = () => {
+        setBestItems(prev => {
+          const nextItems = [...prev, ...sortedBySales.slice(prev.length, prev.length + 8)];
+          return nextItems;
+        });
+      };
+    
+      const loadNewItems = () => {
+        setNewItems(prev => {
+          const nextItems = [...prev, ...sortedByIdDesc.slice(prev.length, prev.length + 8)];
+          return nextItems;
+        });
+      };
+    
+      document.getElementById("bestMoreBtn").addEventListener("click", loadBestItems);
+      document.getElementById("newMoreBtn").addEventListener("click", loadNewItems);
+    
+      return () => {
+        document.getElementById("bestMoreBtn").removeEventListener("click", loadBestItems);
+        document.getElementById("newMoreBtn").removeEventListener("click", loadNewItems);
+      };
+    }, []);
+    
+    const isBestMoreButtonVisible = bestItems.length < allItems.length; // 전체 아이템 수와 비교
+    const isNewMoreButtonVisible = newItems.length < allItems.length; // 전체 아이템 수와 비교
 
 
 
@@ -173,7 +183,7 @@ const Main = () => {
             ))}
           </div>
           <div className="more">
-            <button className="moreBtn" id="bestMoreBtn">더보기</button>
+          {isBestMoreButtonVisible && <button className="moreBtn" id="bestMoreBtn">더보기</button>}
           </div>
         </div>
       </article>
@@ -208,7 +218,7 @@ const Main = () => {
             ))}
           </div>
           <div className="more">
-            <button className="moreBtn" id="newMoreBtn">더보기</button>
+          {isNewMoreButtonVisible &&  <button className="moreBtn" id="newMoreBtn">더보기</button>}
           </div>
         </div>
       </article>
