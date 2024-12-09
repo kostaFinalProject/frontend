@@ -395,7 +395,7 @@ const Header = () => {
           </nav>
           <div className="communitysection">
             <ul>
-              <a href="#">STYLE</a>
+              <a href="/StyleMain">STYLE</a>
             </ul>
           </div>
         </div>
