@@ -1,141 +1,139 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import 'swiper/swiper-bundle.css';
 import './Main.css';
 
 const Main = () => {
-    const items = [
-      {
-        id: 1,
-        image: "/img/ACuniform.jpg",
-        title: "ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)",
-        soldCount: 120,
-        originalPrice: 209000,
-        discountedPrice: 99000,
-        discountRate: 53,
-        description: "Official Licensed Product"
-      },
-      {
-        id: 2,
-        image: "/img/ALUniform.avif",
-        title: "NIKE 브라질 2002 홈 유니폼 #9 (S~L)",
-        soldCount: 200,
-        originalPrice: 199000,
-        discountedPrice: 129000,
-        discountRate: 35,
-        description: "Official Replica Jersey"
-      },
-      {
-        id: 3,
-        image: "/img/MCUuniform.avif",
-        title: "MAN UTD 2008 HOME KIT #7 (M~XL)",
-        soldCount: 80,
-        originalPrice: 219000,
-        discountedPrice: 149000,
-        discountRate: 32,
-        description: "Official Replica Jersey"
-      },
-      {
-        id: 4,
-        image: "/img/CFCuniform.avif",
-        title: "CHELSEA 2020 AWAY KIT #10 (S~L)",
-        soldCount: 250,
-        originalPrice: 179000,
-        discountedPrice: 119000,
-        discountRate: 34,
-        description: "Official Replica Jersey"
-      },
-      {
-        id: 5,
-        image: "/img/BarcelonaUniform.jpg",
-        title: "FC BARCELONA 2021 HOME KIT #9 (M~XL)",
-        soldCount: 500,
-        originalPrice: 189000,
-        discountedPrice: 129000,
-        discountRate: 31,
-        description: "Official Replica Jersey"
-      },
-      {
-        id: 6,
-        image: "/img/PSGuniform.avif",
-        title: "PSG 2022 HOME KIT #30 (M~L)",
-        soldCount: 300,
-        originalPrice: 229000,
-        discountedPrice: 159000,
-        discountRate: 30,
-        description: "Official Replica Jersey"
-      },
-      {
-        id: 7,
-        image: "/img/RealMadridUnifom.avif",
-        title: "REAL MADRID 2020 AWAY KIT #7 (S~L)",
-        soldCount: 110,
-        originalPrice: 199000,
-        discountedPrice: 129000,
-        discountRate: 35,
-        description: "Official Replica Jersey"
-      },
-      {
-        id: 8,
-        image: "/img/Juniform.avif",
-        title: "JUVENTUS 2019 HOME KIT #10 (M~XL)",
-        soldCount: 190,
-        originalPrice: 209000,
-        discountedPrice: 139000,
-        discountRate: 34,
-        description: "Official Replica Jersey"
-      },
-      {
-        id: 9,
-        image: "/img/MCCuniform.avif",
-        title: "JUVENTUS 2009 HOME KIT #11 (M~XL)",
-        soldCount: 90,
-        originalPrice: 109000,
-        discountedPrice: 0,
-        discountRate: 0,
-        description: "Official Replica Jersey"
-      },
-      // 나머지 아이템들도 동일하게 작성...
-    ];
+  const items = [
+    {
+      id: 1,
+      image: "/img/ACuniform.jpg",
+      title: "ADIDAS 아르헨티나 1994 RETRO AWAY #10 (XS~2XL)",
+      soldCount: 120,
+      originalPrice: 209000,
+      discountedPrice: 99000,
+      discountRate: 53,
+      description: "Official Licensed Product"
+    },
+    {
+      id: 2,
+      image: "/img/ALUniform.avif",
+      title: "NIKE 브라질 2002 홈 유니폼 #9 (S~L)",
+      soldCount: 200,
+      originalPrice: 199000,
+      discountedPrice: 129000,
+      discountRate: 35,
+      description: "Official Replica Jersey"
+    },
+    {
+      id: 3,
+      image: "/img/MCUuniform.avif",
+      title: "MAN UTD 2008 HOME KIT #7 (M~XL)",
+      soldCount: 80,
+      originalPrice: 219000,
+      discountedPrice: 149000,
+      discountRate: 32,
+      description: "Official Replica Jersey"
+    },
+    {
+      id: 4,
+      image: "/img/CFCuniform.avif",
+      title: "CHELSEA 2020 AWAY KIT #10 (S~L)",
+      soldCount: 250,
+      originalPrice: 179000,
+      discountedPrice: 119000,
+      discountRate: 34,
+      description: "Official Replica Jersey"
+    },
+    {
+      id: 5,
+      image: "/img/BarcelonaUniform.jpg",
+      title: "FC BARCELONA 2021 HOME KIT #9 (M~XL)",
+      soldCount: 500,
+      originalPrice: 189000,
+      discountedPrice: 129000,
+      discountRate: 31,
+      description: "Official Replica Jersey"
+    },
+    {
+      id: 6,
+      image: "/img/PSGuniform.avif",
+      title: "PSG 2022 HOME KIT #30 (M~L)",
+      soldCount: 300,
+      originalPrice: 229000,
+      discountedPrice: 159000,
+      discountRate: 30,
+      description: "Official Replica Jersey"
+    },
+    {
+      id: 7,
+      image: "/img/RealMadridUnifom.avif",
+      title: "REAL MADRID 2020 AWAY KIT #7 (S~L)",
+      soldCount: 110,
+      originalPrice: 199000,
+      discountedPrice: 129000,
+      discountRate: 35,
+      description: "Official Replica Jersey"
+    },
+    {
+      id: 8,
+      image: "/img/Juniform.avif",
+      title: "JUVENTUS 2019 HOME KIT #10 (M~XL)",
+      soldCount: 190,
+      originalPrice: 209000,
+      discountedPrice: 139000,
+      discountRate: 34,
+      description: "Official Replica Jersey"
+    },
+    {
+      id: 9,
+      image: "/img/MCCuniform.avif",
+      title: "JUVENTUS 2009 HOME KIT #11 (M~XL)",
+      soldCount: 90,
+      originalPrice: 109000,
+      discountedPrice: 0,
+      discountRate: 0,
+      description: "Official Replica Jersey"
+    },
+    // 나머지 아이템들도 동일하게 작성...
+  ];
 
-    const [bestItems, setBestItems] = useState([]);
-    const [newItems, setNewItems] = useState([]);
-    const [allItems, setAllItems] = useState(items); // 전체 아이템을 저장하는 상태 추가
-    
-    useEffect(() => {
-      const sortedBySales = [...items].sort((a, b) => b.soldCount - a.soldCount);
-      const sortedByIdDesc = [...items].sort((a, b) => b.id - a.id);
-    
-      setBestItems(sortedBySales.slice(0, 8));
-      setNewItems(sortedByIdDesc.slice(0, 8));
-    
-      const loadBestItems = () => {
-        setBestItems(prev => {
-          const nextItems = [...prev, ...sortedBySales.slice(prev.length, prev.length + 8)];
-          return nextItems;
-        });
-      };
-    
-      const loadNewItems = () => {
-        setNewItems(prev => {
-          const nextItems = [...prev, ...sortedByIdDesc.slice(prev.length, prev.length + 8)];
-          return nextItems;
-        });
-      };
-    
-      document.getElementById("bestMoreBtn").addEventListener("click", loadBestItems);
-      document.getElementById("newMoreBtn").addEventListener("click", loadNewItems);
-    
-      return () => {
-        document.getElementById("bestMoreBtn").removeEventListener("click", loadBestItems);
-        document.getElementById("newMoreBtn").removeEventListener("click", loadNewItems);
-      };
-    }, []);
-    
-    const isBestMoreButtonVisible = bestItems.length < allItems.length; // 전체 아이템 수와 비교
-    const isNewMoreButtonVisible = newItems.length < allItems.length; // 전체 아이템 수와 비교
+  const [bestItems, setBestItems] = useState([]);
+  const [newItems, setNewItems] = useState([]);
+  const [allItems, setAllItems] = useState(items); // 전체 아이템을 저장하는 상태 추가
+
+  useEffect(() => {
+    const sortedBySales = [...items].sort((a, b) => b.soldCount - a.soldCount);
+    const sortedByIdDesc = [...items].sort((a, b) => b.id - a.id);
+
+    setBestItems(sortedBySales.slice(0, 8));
+    setNewItems(sortedByIdDesc.slice(0, 8));
+
+    const loadBestItems = () => {
+      setBestItems(prev => {
+        const nextItems = [...prev, ...sortedBySales.slice(prev.length, prev.length + 8)];
+        return nextItems;
+      });
+    };
+
+    const loadNewItems = () => {
+      setNewItems(prev => {
+        const nextItems = [...prev, ...sortedByIdDesc.slice(prev.length, prev.length + 8)];
+        return nextItems;
+      });
+    };
+
+    document.getElementById("bestMoreBtn").addEventListener("click", loadBestItems);
+    document.getElementById("newMoreBtn").addEventListener("click", loadNewItems);
+
+    return () => {
+      document.getElementById("bestMoreBtn").removeEventListener("click", loadBestItems);
+      document.getElementById("newMoreBtn").removeEventListener("click", loadNewItems);
+    };
+  }, []);
+
+  const isBestMoreButtonVisible = bestItems.length < allItems.length; // 전체 아이템 수와 비교
+  const isNewMoreButtonVisible = newItems.length < allItems.length; // 전체 아이템 수와 비교
 
 
 
@@ -144,7 +142,10 @@ const Main = () => {
       <article className="mainArticle slider">
         <Swiper
           loop={true}
-          autoplay={{ delay: 3000 }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false, // 사용자가 상호작용해도 autoplay가 중지되지 않도록 설정
+          }}
           navigation
           pagination={{ clickable: true }}
         >
@@ -183,7 +184,7 @@ const Main = () => {
             ))}
           </div>
           <div className="more">
-          {isBestMoreButtonVisible && <button className="moreBtn" id="bestMoreBtn">더보기</button>}
+            {isBestMoreButtonVisible && <button className="moreBtn" id="bestMoreBtn">더보기</button>}
           </div>
         </div>
       </article>
@@ -218,7 +219,7 @@ const Main = () => {
             ))}
           </div>
           <div className="more">
-          {isNewMoreButtonVisible &&  <button className="moreBtn" id="newMoreBtn">더보기</button>}
+            {isNewMoreButtonVisible && <button className="moreBtn" id="newMoreBtn">더보기</button>}
           </div>
         </div>
       </article>

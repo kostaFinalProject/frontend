@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import HomePage from "./components/Pages/HomePage";
-import LoginPage from "./components/Pages/LoginPage";
+import Main from "./components/Main/Main";
+import Login from "./components/Login/Login";
 import MyPageIntro from "./components/MyPage/MyPageIntro";
 import MyPageOrder from "./components/MyPage/MyPageOrder";
 import MyPageBasket from "./components/MyPage/MyPageBasket";
@@ -13,6 +13,7 @@ import MyPageMileage from "./components/MyPage/MyPageMileage";
 import MyPageAddress from "./components/MyPage/MyPageAddress";
 import AddressRegisterForm from "./components/MyPage/AddressRegisterForm";
 import StyleModify from "./components/MyPage/StyleModify";
+import Footer from "./components/Footer/footer";
 //연규님이 하신거
 
 import BoardshoppingLi from './components/BoardshoppingList/BoardshoppingLi.js';
@@ -51,9 +52,9 @@ function App() {
       <Routes>
         <Route
           path="/login"
-          element={<LoginPage setIsLoggedIn={setIsLoggedIn} />}
+          element={<Login setIsLoggedIn={setIsLoggedIn} />}
         />
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Main />} />
         <Route path="/MyPage" element={<MyPageIntro />} />
         <Route path="/MyPage/order" element={<MyPageOrder />} />
         <Route path="/MyPage/basket" element={<MyPageBasket />} />
@@ -79,6 +80,7 @@ function App() {
         <Route path="/Styleprofile" element={<Styleprofile />} />
         <Route path="/StyleprofileMyInterestProduct" element={<StyleprofileMyInterestProduct />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

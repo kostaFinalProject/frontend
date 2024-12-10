@@ -58,28 +58,66 @@ a {
   margin-left: 10px;
 }
 
-/* 검색창 */
-.middle {
+
+/* search 양식 */
+.headerContainer .TotalSearchHead_search {
+  width: 100%;
+  height: 50px;
+  padding-bottom: 50px;
   display: flex;
+  padding-top: 50px;
   justify-content: center;
-  align-items: center;
+
+
 }
 
-.middle .search {
-  width: 380px;
-  height: 44px;
+.headerContainer  .TotalSearchHead_search_container {
+  width: 300px;
+  height: 50px;
+  padding-bottom: 50px;
+  transform: translateY(-19px);
+  justify-content: center;
+}
+
+.headerContainer  .TotalSearchHead_search_input {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 40px;
+  padding: 8px 20px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 16px;
+  line-height: 22px;
+  color: #575756;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.headerContainer  .TotalSearchHead_search_input::placeholder {
+  color: rgba(87, 87, 86, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   font-size: 20px;
-  border: none;
-  border-bottom: 1px solid #000;
-  outline: none;
-  font-family: "Noto Sans KR", sans-serif;
 }
 
-img.search {
-  margin-left: 10px;
-  height: 20px;
-  width: 20px;
+.headerContainer  .TotalSearchHead_search_input:hover,
+.headerContainer  .TotalSearchHead_search_input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
 }
+
 
 /* 오른쪽 버튼 */
 .right {
@@ -176,7 +214,7 @@ img.search {
   height: 28px;
 }
 
-.communitysection a{
+.communitysection a {
   margin-left: 30px;
   margin-right: 3px;
   font-family: "Noto Sans KR", sans-serif;
@@ -186,11 +224,13 @@ img.search {
 
 
 .hasChild {
-  position: relative; /* submenu의 기준점 */
+  position: relative;
+  /* submenu의 기준점 */
 }
 
-.categorypond a{
-  position: relative; /* submenu의 기준점 */
+.categorypond a {
+  position: relative;
+  /* submenu의 기준점 */
   font-family: "Noto Sans KR", sans-serif;
   font-size: 15px;
 }
@@ -203,7 +243,8 @@ img.search {
 
 
 #aaa {
-  position: relative; /* 기준점 설정 */
+  position: relative;
+  /* 기준점 설정 */
 }
 
 .submenu1 {
@@ -220,35 +261,40 @@ img.search {
   margin-top: 10px;
 }
 
-.a1{
-  transform: translateX(-280px); /* 필요에 따라 미세 조정 */
+.a1 {
+  transform: translateX(-280px);
+  /* 필요에 따라 미세 조정 */
 }
 
-.a2{
-  transform: translateX(-430px); /* 필요에 따라 미세 조정 */
+.a2 {
+  transform: translateX(-430px);
+  /* 필요에 따라 미세 조정 */
 }
 
-.a3{
-  transform: translateX(-333px); /* 필요에 따라 미세 조정 */
+.a3 {
+  transform: translateX(-333px);
+  /* 필요에 따라 미세 조정 */
 }
 
-.a4{
-  transform: translateX(-400px); /* 필요에 따라 미세 조정 */
+.a4 {
+  transform: translateX(-400px);
+  /* 필요에 따라 미세 조정 */
 }
 
-.a5{
-  transform: translateX(-488px); /* 필요에 따라 미세 조정 */
+.a5 {
+  transform: translateX(-488px);
+  /* 필요에 따라 미세 조정 */
 }
 
 
 .categorycircle img {
   transform: translateY(0px) !important;
-  width: 95px !important; 
+  width: 95px !important;
   height: 95px !important;
   object-fit: scale-down;
 }
 
-.categorycircle{
+.categorycircle {
   align-items: center;
   display: flex;
   justify-content: center;

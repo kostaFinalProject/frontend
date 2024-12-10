@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = ( {isLoggedIn, setIsLoggedIn}) => {
   const [visibleSubmenu, setVisibleSubmenu] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   useEffect(() => {
     console.log("Header에서 isLoggedIn 상태:", isLoggedIn);
@@ -288,16 +287,13 @@ const Header = () => {
               <img src="https://fakeimg.pl/150x35/" alt="logo" />
             </a>
           </div>
-          <div className="middle">
-            <input
-              className="search"
-              type="text"
-              placeholder="검색어를 입력하세요"
-            />
-            <a href="#">
-              <img src="/img/search.svg" alt="검색 버튼" className="search-icon" />
-            </a>
-          </div>
+          <div className="TotalSearchHead_search">
+                    <form action="">
+                        <div className="TotalSearchHead_search_container">
+                            <input className="TotalSearchHead_search_input" type="text" placeholder="Search" />
+                        </div>
+                    </form>
+                </div>
 
           {isLoggedIn ? (
             <div className="right">
