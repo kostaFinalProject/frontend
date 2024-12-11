@@ -62,7 +62,6 @@
                 </div>
                 <div class="profile_information">
                   <p id="id">jco0807</p>
-                  <p id="comment">@j___c_y</p>
                 </div>
                 <div>
                   <span>신고사유: </span>
@@ -71,7 +70,7 @@
               </div>
             </div>
             <a href="">
-              <div >판결</div>
+              <div>판결</div>
             </a>
           </div>
 
@@ -86,7 +85,6 @@
                 </div>
                 <div class="profile_information">
                   <p id="id">jco0807</p>
-                  <p id="comment">@j___c_y</p>
                 </div>
                 <div>
                   <span>신고사유: </span>
@@ -95,7 +93,62 @@
               </div>
             </div>
             <div class="profile-button">
-              <select name="adminstatus" id="\" class="/">
+              <button id="modal-open">글보기</button>
+            </div>
+
+            <div id="popup" class="modal" style="display: none;">
+              <div class="modal-content">
+                <!-- 탭 -->
+                <div class="tabs">
+                  <button class="tab-link" data-page="page1">게시글</button>
+                  <button class="tab-link" data-page="page2">댓글</button>
+                </div>
+
+                <!-- 페이지 내용 -->
+                <div id="page1" class="page active">
+                  <article>
+                      <!-- ----------------------social_head----------------- -->
+                      <div class="social_head">
+                        <!-- <div class="profile_img"><img src="https://fakeimg.pl/44x44/"  alt=""></div> -->
+                        <div class="profile_img"><img
+                            src="https://cdn.4mation.net/profile/image/tmdals4872_7de6ba24-cec8-4862-89f3-e303a4ff8e01.png?s=100x100&q=100"
+                            alt=""></div>
+                        <div class="profile_text">
+                          <p class="profile_id">under_lapping </p>
+                          <p class="registration_time">2024년 8월 20일</p>
+                        </div>
+                      </div>
+                      <!-- ----------------------social_body----------------- -->
+                      <div class="social_body">
+
+                        <!-- <div class="main_img"><img src="https://fakeimg.pl/640x640/"  alt=""></div> -->
+                        <div class="main_img"><img
+                            src="https://cdn.4mation.net/market/mainimage/sethb_72b2f7b4-6221-4b3d-8a64-319ba82bd7e1_1045x1436.jpeg"
+                            alt=""></div>
+                      </div>
+
+                      <!-- ---------------------social_text-----------------           -->
+                      <div class="social_text">
+                        <h2 class="text_title">코듀로이의 계절 셔츠도 코듀로이로</h2>
+                        <p class="text_tag">#겨울데일리 #겨울코디추천 #아우터추천 #연말선물 #연말룩 #신발리뷰 #사이즈팁 #요즘신발 #KICKS #남자코디 #겨울남자코디
+                          #남자겨울코디 #남자데일리룩</p>
+                      </div>
+                  </article>
+                </div>
+                <div id="page2" class="page">
+                  <div id="reportcomment"> 대충 댓글 양식 따오기 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea libero numquam quae recusandae? Blanditiis, temporibus? Ipsum laborum ea repudiandae magni amet, accusantium harum illum dolorum animi expedita at tempora suscipit?</div>
+                </div>
+
+                <!-- 모달 닫기 버튼 -->
+                <button id="close">Close</button>
+              </div>
+            </div>
+
+
+
+
+            <div class="profile-button">
+              <select name="adminstatus" id="\" class="/" style="height: 37.33px; margin-bottom: 5px; width: 81.33px;">
                 <option value="/">1일</option>
                 <option value="//">7일</option>
                 <option value="///">30일</option>
@@ -109,37 +162,83 @@
             </div>
           </div>
 
-        <div class="reportbox">
-          <div class="reportboxheader">
-            <div id="date">10월 10일</div>
-          </div>
-          <div class="reportboxdetail">
-            <div class="profile">
-              <div class="profile_img">
-                <img src="https://fakeimg.pl/150x150/" alt="" />
-              </div>
-              <div class="profile_text">
-                <div class="profile_head">
-                  <span class="profile_nickname" id="nickname">j___c_y</span>
-                </div>
-                <div class="profile_information">
-                  <p id="id">jco0807</p>
-                  <p id="comment">@j___c_y</p>
-                </div>
-                <div>
-                  <span>신고사유: </span>
-                  그냥
-                </div>
-              </div>
+          <div class="reportbox">
+            <div class="reportboxheader">
+              <div id="date">10월 10일</div>
             </div>
-            <a href="">
-              <div >판결</div>
-            </a>
+            <div class="reportboxdetail">
+              <div class="profile">
+                <div class="profile_img">
+                  <img src="https://fakeimg.pl/150x150/" alt="" />
+                </div>
+                <div class="profile_text">
+                  <div class="profile_head">
+                    <span class="profile_nickname" id="nickname">j___c_y</span>
+                  </div>
+                  <div class="profile_information">
+                    <p id="id">jco0807</p>
+                    <p id="comment">@j___c_y</p>
+                  </div>
+                  <div>
+                    <span>신고사유: </span>
+                    그냥
+                  </div>
+                </div>
+              </div>
+              <a href="">
+                <div>판결</div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
 </body>
+
+<!-- jQuery 포함 (최소한 이 스크립트가 먼저 로드되어야 합니다) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // 모달 열기
+    $("#modal-open").click(function () {
+      $("#popup").fadeIn(); // 모달을 fadeIn() 애니메이션으로 표시
+    });
+
+    // 모달 닫기
+    $("#close").click(function () {
+      $("#popup").fadeOut(); // 모달을 fadeOut() 애니메이션으로 숨김
+    });
+
+    // 모달 배경 클릭 시 모달 닫기
+    $("#popup").click(function (event) {
+      // 모달 내용 영역을 클릭한 경우에는 닫히지 않도록 막음
+      if ($(event.target).is("#popup")) {
+        $("#popup").fadeOut();
+      }
+    });
+
+    // 처음에는 첫 번째 페이지가 활성화되도록 설정
+    openPage("page1");
+
+    // 탭 버튼 클릭 시 페이지 전환
+    $(".tab-link").click(function () {
+      const pageName = $(this).data("page");
+      openPage(pageName);
+    });
+
+    function openPage(pageName) {
+      // 모든 페이지 숨기기
+      $(".page").removeClass("active");
+
+      // 모든 탭 비활성화
+      $(".tab-link").removeClass("active");
+
+      // 해당 페이지와 탭 활성화
+      $("#" + pageName).addClass("active");
+      $(".tab-link[data-page='" + pageName + "']").addClass("active");
+    }
+  });
+</script>
 
 </html>

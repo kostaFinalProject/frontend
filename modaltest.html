@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="modaltest.css">
+</head>
+
+<body>
+
+  <button id="modal-open">Open Modal</button>
+
+<!-- 모달 구조 (처음에는 숨겨짐) -->
+<div id="popup" class="modal" style="display: none;">
+  <div class="modal-content">
+    <!-- 탭 -->
+    <div class="tabs">
+      <button class="tab-link" data-page="page1">Page 1</button>
+      <button class="tab-link" data-page="page2">Page 2</button>
+    </div>
+
+    <!-- 페이지 내용 -->
+    <div id="page1" class="page active">
+      <article>
+        <section class="social_title">
+ <!-- ----------------------social_head----------------- -->
+            <div class="social_head">
+                <!-- <div class="profile_img"><img src="https://fakeimg.pl/44x44/"  alt=""></div> -->
+                <div class="profile_img"><img src="https://cdn.4mation.net/profile/image/tmdals4872_7de6ba24-cec8-4862-89f3-e303a4ff8e01.png?s=100x100&q=100"  alt=""></div>
+                <div class="profile_text">
+                    <p class="profile_id">under_lapping </p>
+                    <p class="registration_time">2024년 8월 20일</p>
+                </div>
+
+                <button class="follow_btn">팔로우</button>
+            </div>
+<!-- ----------------------social_body----------------- -->
+            <div class="social_body">
+
+                <!-- <div class="main_img"><img src="https://fakeimg.pl/640x640/"  alt=""></div> -->
+                <div class="main_img"><img src="https://cdn.4mation.net/market/mainimage/sethb_72b2f7b4-6221-4b3d-8a64-319ba82bd7e1_1045x1436.jpeg" alt=""></div>
+                <div class="main_img_list">JS해야하는  . . .</div>
+            </div>
+
+ <!-- ---------------------social_text-----------------           -->
+            <div class="social_text">
+                <h2 class="text_title">코듀로이의 계절 셔츠도 코듀로이로</h2>
+                <p class="text_tag">#겨울데일리 #겨울코디추천 #아우터추천 #연말선물 #연말룩 #신발리뷰 #사이즈팁 #요즘신발 #KICKS #남자코디 #겨울남자코디 #남자겨울코디 #남자데일리룩</p>
+            </div>
+        </section>
+    </article>
+    </div>
+    <div id="page2" class="page">
+      <h2>Page 2 Content</h2>
+      <p>This is the content of Page 2.</p>
+    </div>
+
+    <!-- 모달 닫기 버튼 -->
+    <button id="close">Close</button>
+  </div>
+</div>
+
+</body>
+
+<!-- jQuery 포함 (최소한 이 스크립트가 먼저 로드되어야 합니다) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // 모달 열기
+    $("#modal-open").click(function () {
+      $("#popup").fadeIn(); // 모달을 fadeIn() 애니메이션으로 표시
+    });
+
+    // 모달 닫기
+    $("#close").click(function () {
+      $("#popup").fadeOut(); // 모달을 fadeOut() 애니메이션으로 숨김
+    });
+
+    // 모달 배경 클릭 시 모달 닫기
+    $("#popup").click(function (event) {
+      // 모달 내용 영역을 클릭한 경우에는 닫히지 않도록 막음
+      if ($(event.target).is("#popup")) {
+        $("#popup").fadeOut();
+      }
+    });
+
+    // 처음에는 첫 번째 페이지가 활성화되도록 설정
+    openPage("page1");
+
+    // 탭 버튼 클릭 시 페이지 전환
+    $(".tab-link").click(function () {
+      const pageName = $(this).data("page");
+      openPage(pageName);
+    });
+
+    function openPage(pageName) {
+      // 모든 페이지 숨기기
+      $(".page").removeClass("active");
+
+      // 모든 탭 비활성화
+      $(".tab-link").removeClass("active");
+
+      // 해당 페이지와 탭 활성화
+      $("#" + pageName).addClass("active");
+      $(".tab-link[data-page='" + pageName + "']").addClass("active");
+    }
+  });
+</script>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원수정</title>
+  <link rel="stylesheet" href="categorymaker.css">
+</head>
+
+<body>
+  <section class="adminsection">
+    <div class="list">
+      <div class="introduce">
+        <div class="name"><strong style="margin-right: 5px; margin-left: 10px;">최고 관리자</strong>님</div>
+      </div>
+      <div class="detail">
+        <div class="detail-list"></div>
+        <div class="detail-noselect" onclick='location.href="#"'>
+          <div class="order">신고된 게시글</div>
+
+        </div>
+        <div class="detail-noselect" onclick='location.href="#"'>
+          <div class="member">신고된 댓글</div>
+
+        </div>
+        <div id="item" class="detail-noselect" onclick='location.href="upload-item.html"'>
+          <div class="item">신고된 유저</div>
+
+        </div>
+        <div id="item" class="detail-noselect" onclick='location.href="upload-item.html"'>
+          <div class="item">관리자 권한 관리</div>
+
+        </div>
+        <div id="item" class="detail-noselect" onclick='location.href="upload-item.html"'>
+          <div class="item">아이템 등록</div>
+
+        </div>
+        <div id="item" class="detail-select" onclick='location.href="upload-item.html"'>
+          <div class="item">카테고리 등록</div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="content-name" style="margin-bottom: 7px; font-size: 20px;">
+        카테고리 등록
+      </div>
+      <hr>
+      <div class="content">
+        <div class="makecategory">
+          <span>카테고리 만들기 (만들 카테고리 체크하세요)</span>
+          <div class="upcategory">
+            <input type="checkbox">
+            <span>상위 카테고리</span>
+            <input type="text" style="width: 300px; height: 20px;">
+          </div>
+          <div class="downcategory">
+            <input type="checkbox">
+            <span>하위 카테고리</span>
+            <div>
+              <select name="orderstatus" id="orderstatus" class="fSelect">
+                <option value="all">선택</option>
+                <option value="shippedbefore">해축</option>
+                <option value="shippedstandby">국축</option>
+                <option value="shippedbegin">야구</option>
+                <option value="shipcomplate">배구</option>
+                <option value="ordercancel">ee</option>
+              </select>
+            </div>
+            <input type="text" style="width: 300px; height: 20px;">
+            <div>
+              파일선택
+
+            </div>
+          </div>
+          <button style="width: 100px;">제출</button>
+        </div>
+        <div class="categorylist">
+          <span>카테고리 리스트</span>
+          <button>삭제</button>
+          <div class="category">
+            <div>
+              <input type="checkbox">
+              해외축구
+            </div>
+            <div>
+              <input type="checkbox">
+              해외축구-맨유
+            </div>
+            <div>
+              <input type="checkbox">
+              해외축구-맨시티
+            </div>
+            <div>
+              <input type="checkbox">
+              해외축구-레알
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
